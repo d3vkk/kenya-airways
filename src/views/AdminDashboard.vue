@@ -51,6 +51,7 @@
             </svg>
           </button>
         </div>
+        <div class="uppercase">Admin Dashboard</div>
         <div>
           <a href="tel:0711188890" class="mx-4">Phone</a>
           <a href="mailto:contact@kenyaairways.com" class="mx-4">Email</a>
