@@ -51,25 +51,91 @@
             </svg>
           </button>
         </div>
+        <div class="uppercase">Admin Dashboard</div>
         <div>
-          <a href="tel:0711188890" class="mx-4">Phone</a>
-          <a href="mailto:contact@kenyaairways.com" class="mx-4">Email</a>
+          <a href="tel:0711188890" class="mx-4">Call us</a>
+          <a href="mailto:contact@kenyaairways.com" class="mx-4">Email us</a>
         </div>
       </header>
       <div class="mt-8 flex flex-col mt-6">
         <div class="my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
+          <div class="flex flex-row justify-end items-end">
+            <button
+              class="px-3 py-1 bg-black rounded-md text-white font-medium tracking-wide hover:bg-green-500 ml-3 my-3"
+            >
+              Create Booking
+            </button>
+          </div>
           <div
             class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
           >
             <table class="min-w-full">
-              <thead>
+              <thead class="bg-gray-300">
                 <tr>
                   <th>Name</th>
-                  <th>Seat Number</th>
+                  <th>Seat&nbsp;Count</th>
+                  <th>Seat&nbsp;Numbers</th>
                   <th>Edit</th>
                   <th>Delete</th>
                 </tr>
               </thead>
+              <tbody
+                class="bg-white"
+                role="rowgroup"
+                v-for="(passenger, passengerIndex) in passengerData"
+                :key="passengerIndex"
+              >
+                <tr role="row">
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                  >
+                    <div class="flex items-center">
+                      <div class="m-4">
+                        <div
+                          class="text-sm leading-5 font-medium text-gray-900"
+                          v-html="passenger.name"
+                        ></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                  >
+                    <div
+                      class="text-sm leading-5 text-gray-900"
+                      v-html="passenger.seatCount"
+                    ></div>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                  >
+                    <span
+                      v-for="(seatNumber,
+                      seatNumbersIndex) in passenger.seatNumbers"
+                      :key="seatNumbersIndex"
+                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      >{{ seatNumber }}</span
+                    >
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                  >
+                    <div
+                      class="text-indigo-600 hover:text-indigo-900"
+                      @click="editData(passengerIndex)"
+                    >
+                      Edit
+                    </div>
+                  </td>
+
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    @click="deleteData(passengerIndex)"
+                  >
+                    <div class="text-red-600 hover:text-red-900">Delete</div>
+                  </td>
+                </tr>
+              </tbody>
             </table>
           </div>
         </div>
@@ -84,7 +150,38 @@ export default {
   data() {
     return {
       sidebarOpen: false,
+      passengerData: {},
     };
+  },
+  mounted() {
+    localStorage.setItem(
+      "passengerData",
+      JSON.stringify({
+        passengerData: [
+          {
+            name: "Felicitas Otolo",
+            seatCount: 3,
+            seatNumbers: ["34A", "33A", "35A"],
+          },
+          {
+            name: "Gilbert Jirongo",
+            seatCount: 1,
+            seatNumbers: ["36A"],
+          },
+          {
+            name: "Martin Kiplimo",
+            seatCount: 5,
+            seatNumbers: ["38A", "40A", "70S", "22A", "17C"],
+          },
+        ],
+      })
+    );
+    const passengerDataStored = JSON.parse(
+      localStorage.getItem("passengerData")
+    );
+    if (passengerDataStored != null) {
+      this.passengerData = passengerDataStored.passengerData;
+    }
   },
 };
 </script>
