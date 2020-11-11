@@ -103,7 +103,7 @@
                   >
                     <div
                       class="text-sm leading-5 text-gray-900"
-                      v-html="passenger.seatCount"
+                      v-html="passenger.seatNumbers.length"
                     ></div>
                   </td>
                   <td
@@ -160,17 +160,14 @@ export default {
         passengerData: [
           {
             name: "Felicitas Otolo",
-            seatCount: 3,
             seatNumbers: ["34A", "33A", "35A"],
           },
           {
             name: "Gilbert Jirongo",
-            seatCount: 1,
             seatNumbers: ["36A"],
           },
           {
             name: "Martin Kiplimo",
-            seatCount: 5,
             seatNumbers: ["38A", "40A", "70S", "22A", "17C"],
           },
         ],
