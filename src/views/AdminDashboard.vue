@@ -61,7 +61,7 @@
         <div class="my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
           <div class="flex flex-row justify-end items-end">
             <button
-              class="px-3 py-1 bg-black rounded-md text-white font-medium tracking-wide hover:bg-green-500 ml-3 my-3"
+              class="px-3 py-1 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 my-3"
             >
               Create Booking
             </button>
