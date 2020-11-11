@@ -122,7 +122,7 @@
                   >
                     <div
                       class="text-indigo-600 hover:text-indigo-900"
-                      @click="editData(passengerIndex)"
+                      @click="editBooking(passengerIndex)"
                     >
                       Edit
                     </div>
@@ -130,7 +130,7 @@
 
                   <td
                     class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
-                    @click="deleteData(passengerIndex)"
+                    @click="deleteBooking(passengerIndex)"
                   >
                     <div class="text-red-600 hover:text-red-900">Delete</div>
                   </td>
@@ -179,6 +179,20 @@ export default {
     if (passengerDataStored != null) {
       this.passengerData = passengerDataStored.passengerData;
     }
+  },
+  methods: {
+    editBooking(passengerIndex) {
+      localStorage.setItem(
+        "editPassengerData",
+        JSON.stringify({
+          editPassengerData: {
+            passengerIndex: passengerIndex,
+            seatNumbers: this.passengerData[passengerIndex].seatNumbers,
+          }
+        })
+      );
+      this.$router.push("/editbooking");
+    },
   },
 };
 </script>
