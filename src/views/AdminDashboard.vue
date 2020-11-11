@@ -28,7 +28,7 @@
     </div>
     <div class="flex-1 flex flex-col">
       <header
-        class="flex justify-between items-center py-4 px-6 bg-white border-b-4 border-red-700"
+        class="flex justify-between items-center py-4 px-6 bg-white border-b-4 border-red-800"
       >
         <div class="flex items-center">
           <button
