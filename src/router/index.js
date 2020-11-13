@@ -10,6 +10,11 @@ const routes = [
     name: 'AdminDashboard',
     component: AdminDashboard
   },
+  {
+    path: '/editbooking',
+    name: 'AdminBookingEdit',
+    component: () => import( /* webpackChunkName: "editbooking" */ '../views/AdminBookingEdit.vue')
+  }
 ]
 
 const router = new VueRouter({
