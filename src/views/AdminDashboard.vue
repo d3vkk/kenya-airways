@@ -155,10 +155,10 @@ export default {
     };
   },
   mounted() {
-    const initialPassengerDataStored = JSON.parse(
+    const passengerDataStored = JSON.parse(
       localStorage.getItem("passengerData")
     );
-    if (initialPassengerDataStored == null) {
+    if (passengerDataStored == null) {
       localStorage.setItem(
         "passengerData",
         JSON.stringify({
