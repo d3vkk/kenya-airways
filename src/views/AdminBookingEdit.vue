@@ -4,12 +4,7 @@
     <form @submit.prevent="editBooking">
       <div class="mb-4 mt-4 p-2">
         <div class="mb-2">Seat Numbers</div>
-        <input
-          type="text"
-          autocomplete
-          required
-          v-model="seatNumbers"
-        />
+        <input type="text" autocomplete required v-model="seatNumbers" />
       </div>
       <div class="flex flex-row">
         <button
@@ -50,16 +45,17 @@ export default {
       );
       if (passengerDataStored != null) {
         this.passengerData = passengerDataStored.passengerData;
+        const passengerIndex = this.editPassengerData.passengerIndex;
+        this.passengerData[passengerIndex] = {
+          name: this.passengerData[passengerIndex].name,
+          seatNumbers: this.seatNumbers.split(","),
+        };
+        localStorage.setItem(
+          "passengerData",
+          JSON.stringify({ passengerData: this.passengerData })
+        );
+        this.$router.push("/admin");
       }
-      const passengerIndex = this.editPassengerData.passengerIndex;
-      this.passengerData[passengerIndex] = {
-        name: this.passengerData[passengerIndex].name,
-        seatNumbers: this.seatNumbers.split(","),
-      };
-      localStorage.setItem(
-        "passengerData",
-        JSON.stringify({ passengerData: this.passengerData })
-      );
     },
   },
 };
