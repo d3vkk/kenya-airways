@@ -6,8 +6,6 @@
         <div class="mb-2">Seat Numbers</div>
         <input
           type="text"
-          minlength="2"
-          maxlength="20"
           autocomplete
           required
           v-model="seatNumbers"
