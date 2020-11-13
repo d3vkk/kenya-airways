@@ -14,6 +14,11 @@ const routes = [
     path: '/editbooking',
     name: 'AdminBookingEdit',
     component: () => import( /* webpackChunkName: "editbooking" */ '../views/AdminBookingEdit.vue')
+  },
+  {
+    path: '/createbooking',
+    name: 'AdminBookingCreate',
+    component: () => import( /* webpackChunkName: "createbooking" */ '../views/AdminBookingCreate.vue')
   }
 ]
 

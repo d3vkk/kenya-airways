@@ -60,11 +60,12 @@
       <div class="mt-8 flex flex-col mt-6">
         <div class="my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
           <div class="flex flex-row justify-end items-end">
-            <button
+            <router-link
               class="px-3 py-1 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 my-3"
+              to="/createbooking"
             >
               Create Booking
-            </button>
+            </router-link>
           </div>
           <div
             class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
@@ -154,29 +155,30 @@ export default {
     };
   },
   mounted() {
-    localStorage.setItem(
-      "passengerData",
-      JSON.stringify({
-        passengerData: [
-          {
-            name: "Felicitas Otolo",
-            seatNumbers: ["34A", "33A", "35A"],
-          },
-          {
-            name: "Gilbert Jirongo",
-            seatNumbers: ["36A"],
-          },
-          {
-            name: "Martin Kiplimo",
-            seatNumbers: ["38A", "40A", "70S", "22A", "17C"],
-          },
-        ],
-      })
-    );
-    const passengerDataStored = JSON.parse(
+    const initialPassengerDataStored = JSON.parse(
       localStorage.getItem("passengerData")
     );
-    if (passengerDataStored != null) {
+    if (initialPassengerDataStored == null) {
+      localStorage.setItem(
+        "passengerData",
+        JSON.stringify({
+          passengerData: [
+            {
+              name: "Felicitas Otolo",
+              seatNumbers: ["34A", "33A", "35A"],
+            },
+            {
+              name: "Gilbert Jirongo",
+              seatNumbers: ["36A"],
+            },
+            {
+              name: "Martin Kiplimo",
+              seatNumbers: ["38A", "40A", "70S", "22A", "17C"],
+            },
+          ],
+        })
+      );
+    } else {
       this.passengerData = passengerDataStored.passengerData;
     }
   },
@@ -188,7 +190,7 @@ export default {
           editPassengerData: {
             passengerIndex: passengerIndex,
             seatNumbers: this.passengerData[passengerIndex].seatNumbers,
-          }
+          },
         })
       );
       this.$router.push("/editbooking");
