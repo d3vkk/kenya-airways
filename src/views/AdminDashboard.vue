@@ -13,7 +13,7 @@
       class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-red-800 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0"
     >
       <div class="text-center mt-4">
-        <router-link class="text-white text-xl uppercase fo" to="/"
+        <router-link class="text-white text-xl uppercase" to="/"
           >Kenya Airways</router-link
         >
       </div>
