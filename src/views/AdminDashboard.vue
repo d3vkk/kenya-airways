@@ -78,6 +78,7 @@
                   <th>Seat&nbsp;Numbers</th>
                   <th>Edit</th>
                   <th>Delete</th>
+                  <th>Print</th>
                 </tr>
               </thead>
               <tbody
@@ -135,6 +136,12 @@
                   >
                     <div class="text-red-600 hover:text-red-900">Delete</div>
                   </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    @click="printBooking(passengerIndex)"
+                  >
+                    <div class="text-green-600 hover:text-green-900">Print</div>
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -146,6 +153,8 @@
 </template>
 
 <script>
+import { jsPDF } from "jspdf";
+
 export default {
   name: "admin-dashboard",
   data() {
@@ -195,6 +204,21 @@ export default {
       );
       this.$router.push("/editbooking");
     },
+    printBooking(passengerIndex){
+      const printPassenger = this.passengerData[passengerIndex];
+      const timeNow = new Date();
+      const printText = `
+        Kenya Airways - The Pride Of Africa
+        Time: ${timeNow}
+        Name: ${printPassenger.name}
+        Seat Count: ${printPassenger.seatNumbers.length}
+        Seat Numbers: ${printPassenger.seatNumbers.join(', ')}
+      `;
+
+      const pdf = new jsPDF();
+      pdf.text(printText, 10, 10);
+      pdf.save(`${printPassenger.name},${timeNow}.pdf`);
+    }
   },
 };
 </script>
