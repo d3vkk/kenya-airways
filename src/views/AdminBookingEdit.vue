@@ -13,10 +13,10 @@
       </div>
       <div class="flex flex-row">
         <button
-          class="p-2 bg-black rounded-md text-white font-medium tracking-wide hover:bg-black ml-3 text-sm"
+          class="p-2 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 text-sm"
           type="submit"
         >
-          Submit
+          Edit
         </button>
         <router-link class="p-2" to="/admin">Cancel</router-link>
       </div>
