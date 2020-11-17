@@ -1,14 +1,19 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import AdminDashboard from '../views/AdminDashboard.vue'
+import LandingPage from '../views/LandingPage.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    path: '/',
+    name: 'LandingPage',
+    component: LandingPage
+  },
+  {
     path: '/admin',
     name: 'AdminDashboard',
-    component: AdminDashboard
+    component: () => import( /* webpackChunkName: "admin" */ '../views/AdminDashboard.vue')
   },
   {
     path: '/editbooking',
