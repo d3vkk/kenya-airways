@@ -24,7 +24,12 @@ const routes = [
     path: '/createbooking',
     name: 'AdminBookingCreate',
     component: () => import( /* webpackChunkName: "createbooking" */ '../views/AdminBookingCreate.vue')
-  }
+  },
+  {
+    path: '/dashboard',
+    name: 'PassDashboard',
+    component: () => import( /* webpackChunkName: "dashboard" */ '../views/PassDashboard.vue')
+  },
 ]
 
 const router = new VueRouter({
