@@ -1,12 +1,12 @@
 <template>
   <div class="flex flex-row justify-between shadow-md items-center px-3">
-    <div>
+    <router-link to="/">
       <img
         src="img/logo.svg"
         alt="Kenya Airways"
         style="height: 3rem; width: 3rem"
       />
-    </div>
+    </router-link>
     <div class="flex flex-row justify-between items-center">
       <div class="mr-3">About us</div>
       <div>Contact us</div>
