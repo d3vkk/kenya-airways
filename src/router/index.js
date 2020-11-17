@@ -11,6 +11,11 @@ const routes = [
     component: LandingPage
   },
   {
+    path: '/pay',
+    name: 'PassPay',
+    component: () => import( /* webpackChunkName: "pay" */ '../views/PassPay.vue')
+  },
+  {
     path: '/admin',
     name: 'AdminDashboard',
     component: () => import( /* webpackChunkName: "admin" */ '../views/AdminDashboard.vue')
