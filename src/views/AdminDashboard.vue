@@ -204,6 +204,15 @@ export default {
       );
       this.$router.push("/editbooking");
     },
+    deleteBooking(passengerIndex) {
+      this.passengerData.splice(passengerIndex, 1);
+      localStorage.setItem(
+        "passengerData",
+        JSON.stringify({
+          passengerData: this.passengerData,
+        })
+      );
+    },
     printBooking(passengerIndex){
       const printPassenger = this.passengerData[passengerIndex];
       const timeNow = new Date();
