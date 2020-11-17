@@ -4,6 +4,18 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --red: #E91D24;
+    --gray: #C5BEBE;
+    --bigger: 5rem;
+    --big: 2.5rem;
+    --normal: 1.25rem;
+    --base: 1rem;
+    --smaller: 0.625rem;
+}
+
 body {
     font-family: 'Lato',sans-serif;
 }
