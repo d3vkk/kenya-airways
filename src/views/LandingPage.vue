@@ -69,15 +69,18 @@
         </div>
       </form>
     </div>
+    <FooterSection />
   </div>
 </template>
 
 <script>
 import NavBar from "../layouts/NavBar";
+import FooterSection from "../layouts/FooterSection";
 export default {
   name: "landing-page",
   components: {
     NavBar,
+    FooterSection,
   },
   data() {
     return {

@@ -8,7 +8,8 @@
     --white: #ffffff;
     --black: #000000;
     --red: #E91D24;
-    --gray: #C5BEBE;
+    --gray-100: #dfcfcf;
+    --gray-200: #C5BEBE;
     --bigger: 5rem;
     --big: 2.5rem;
     --normal: 1.25rem;
@@ -33,4 +34,20 @@ body {
     font-size: var(--normal);
     top: 10rem;
     left: 7.1rem;
+}
+
+footer svg {
+    fill: var(--black);
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+
+#first-footer {
+    background-color: var(--gray-100);
+}
+
+.footer-title {
+    font-weight: bold;
+    text-transform: uppercase;
 }
