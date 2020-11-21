@@ -22,7 +22,7 @@ body {
 }
 
 #hero-title {
-    color:var(--red);
+    color: var(--red);
     font-size: var(--big);
     top: 7rem;
     left: 1.5rem;
@@ -30,7 +30,7 @@ body {
 
 #hero-slogan {
     /* color:var(--white); */
-    color:var(--black);
+    color: var(--black);
     font-size: var(--normal);
     top: 10rem;
     left: 7.1rem;

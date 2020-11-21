@@ -1,5 +1,7 @@
 <template>
-  <div class="flex flex-row justify-between shadow-md items-center px-3 bg-white">
+  <div
+    class="flex flex-row justify-between shadow-md items-center px-3 bg-white"
+  >
     <router-link to="/">
       <img
         src="img/logo.svg"

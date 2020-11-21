@@ -213,7 +213,7 @@ export default {
         })
       );
     },
-    printBooking(passengerIndex){
+    printBooking(passengerIndex) {
       const printPassenger = this.passengerData[passengerIndex];
       const timeNow = new Date();
       const printText = `
@@ -221,13 +221,13 @@ export default {
         Time: ${timeNow}
         Name: ${printPassenger.name}
         Seat Count: ${printPassenger.seatNumbers.length}
-        Seat Numbers: ${printPassenger.seatNumbers.join(', ')}
+        Seat Numbers: ${printPassenger.seatNumbers.join(", ")}
       `;
 
       const pdf = new jsPDF();
       pdf.text(printText, 10, 10);
       pdf.save(`${printPassenger.name},${timeNow}.pdf`);
-    }
+    },
   },
 };
 </script>
