@@ -76,7 +76,7 @@
 </template>
 
 <script>
-import NavBar from "../components/NavBar";
+import NavBar from "../layouts/NavBar";
 export default {
   name: "pass-pay",
   components: {
