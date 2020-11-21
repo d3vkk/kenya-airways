@@ -51,3 +51,25 @@ footer svg {
     font-weight: bold;
     text-transform: uppercase;
 }
+
+#privacy-policy h1 {
+    font-size: var(--big);
+}
+
+#privacy-policy .title {
+    font-size: var(--normal);
+    color: var(--red);
+}
+
+#privacy-policy p {
+    margin: 10px 0;
+}
+
+#privacy-policy ul {
+    list-style: disc;
+    margin: 1em;
+}
+
+#privacy-policy ul li {
+    margin: 5px 0;
+}
