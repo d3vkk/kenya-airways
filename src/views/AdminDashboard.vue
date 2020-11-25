@@ -164,9 +164,7 @@ export default {
     };
   },
   mounted() {
-    const ticketDataStored = JSON.parse(
-      localStorage.getItem("ticketData")
-    );
+    var ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
     if (ticketDataStored == null) {
       localStorage.setItem(
         "ticketData",
@@ -208,10 +206,10 @@ export default {
           })
         )
       );
-    } else {
-      this.passengerData = ticketDataStored.passengerData;
-      this.seatNumbers = ticketDataStored.seatNumbers;
+      ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
     }
+    this.passengerData = ticketDataStored.passengerData;
+    this.seatNumbers = ticketDataStored.seatNumbers;
   },
   methods: {
     editBooking(passengerIndex) {
