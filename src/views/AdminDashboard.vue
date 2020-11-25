@@ -105,7 +105,7 @@
                   >
                     <div
                       class="text-sm leading-5 text-gray-900"
-                      v-html="passenger.seatNumbers.length"
+                      v-html="seatNumbers.length"
                     ></div>
                   </td>
                   <td
@@ -113,7 +113,7 @@
                   >
                     <span
                       v-for="(seatNumber,
-                      seatNumbersIndex) in passenger.seatNumbers"
+                      seatNumbersIndex) in seatNumbers"
                       :key="seatNumbersIndex"
                       class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
                       >{{ seatNumber }}</span
@@ -164,31 +164,53 @@ export default {
     };
   },
   mounted() {
-    const passengerDataStored = JSON.parse(
-      localStorage.getItem("passengerData")
+    const ticketDataStored = JSON.parse(
+      localStorage.getItem("ticketData")
     );
-    if (passengerDataStored == null) {
+    if (ticketDataStored == null) {
       localStorage.setItem(
-        "passengerData",
-        JSON.stringify({
-          passengerData: [
-            {
-              name: "Felicitas Otolo",
-              seatNumbers: ["34A", "33A", "35A"],
+        "ticketData",
+        JSON.stringify(
+          ({
+            tripId: "21A",
+            ticketId: "DSFDFA78",
+            seatNumbers: ["34A", "33A", "35A"],
+            infants: false,
+            petCount: 2,
+            price: 23000,
+            passengerData: [
+              {
+                name: "Felicitas Otolo",
+                dob: "1/11/1990",
+                phoneNumber: "0756785234",
+                email: "felicitas@gmail.com",
+              },
+              {
+                name: "Gilbert Jirongo",
+                dob: "4/2/1994",
+                phoneNumber: "0766735464",
+                email: "gilbert@gmail.com",
+              },
+              {
+                name: "Martin Kiplimo",
+                dob: "7/8/1974",
+                phoneNumber: "0766869004",
+                email: "martin@hotmail.com",
+              },
+            ],
+            paymentData: {
+              debitOrCredit: true,
+              cardNumber: "4241313221",
+              name: "Adaer",
+              date: "21/3/2012",
+              cvc: "3243",
             },
-            {
-              name: "Gilbert Jirongo",
-              seatNumbers: ["36A"],
-            },
-            {
-              name: "Martin Kiplimo",
-              seatNumbers: ["38A", "40A", "70S", "22A", "17C"],
-            },
-          ],
-        })
+          })
+        )
       );
     } else {
-      this.passengerData = passengerDataStored.passengerData;
+      this.passengerData = ticketDataStored.passengerData;
+      this.seatNumbers = ticketDataStored.seatNumbers;
     }
   },
   methods: {
