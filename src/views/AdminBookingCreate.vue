@@ -1,6 +1,6 @@
 <template>
   <div class="container max-w-xs p-8">
-    <div class="text-2xl">Create Booking</div>
+    <div class="pl-2 text-2xl">Create Booking</div>
     <form @submit.prevent="createBooking">
       <div class="mb-4 mt-4 p-2">
         <div class="mb-2">Passenger Name</div>
