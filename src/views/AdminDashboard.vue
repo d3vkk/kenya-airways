@@ -112,8 +112,7 @@
                     class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
                   >
                     <span
-                      v-for="(seatNumber,
-                      seatNumbersIndex) in seatNumbers"
+                      v-for="(seatNumber, seatNumbersIndex) in seatNumbers"
                       :key="seatNumbersIndex"
                       class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
                       >{{ seatNumber }}</span
@@ -168,43 +167,41 @@ export default {
     if (ticketDataStored == null) {
       localStorage.setItem(
         "ticketData",
-        JSON.stringify(
-          ({
-            tripId: "21A",
-            ticketId: "DSFDFA78",
-            seatNumbers: ["34A", "33A", "35A"],
-            infants: false,
-            petCount: 2,
-            price: 23000,
-            passengerData: [
-              {
-                name: "Felicitas Otolo",
-                dob: "1/11/1990",
-                phoneNumber: "0756785234",
-                email: "felicitas@gmail.com",
-              },
-              {
-                name: "Gilbert Jirongo",
-                dob: "4/2/1994",
-                phoneNumber: "0766735464",
-                email: "gilbert@gmail.com",
-              },
-              {
-                name: "Martin Kiplimo",
-                dob: "7/8/1974",
-                phoneNumber: "0766869004",
-                email: "martin@hotmail.com",
-              },
-            ],
-            paymentData: {
-              debitOrCredit: true,
-              cardNumber: "4241313221",
-              name: "Adaer",
-              date: "21/3/2012",
-              cvc: "3243",
+        JSON.stringify({
+          tripId: "21A",
+          ticketId: "DSFDFA78",
+          seatNumbers: ["34A", "33A", "35A"],
+          infants: false,
+          petCount: 2,
+          price: 23000,
+          passengerData: [
+            {
+              name: "Felicitas Otolo",
+              dob: "1/11/1990",
+              phoneNumber: "0756785234",
+              email: "felicitas@gmail.com",
             },
-          })
-        )
+            {
+              name: "Gilbert Jirongo",
+              dob: "4/2/1994",
+              phoneNumber: "0766735464",
+              email: "gilbert@gmail.com",
+            },
+            {
+              name: "Martin Kiplimo",
+              dob: "7/8/1974",
+              phoneNumber: "0766869004",
+              email: "martin@hotmail.com",
+            },
+          ],
+          paymentData: {
+            debitOrCredit: true,
+            cardNumber: "4241313221",
+            name: "Adaer",
+            date: "21/3/2012",
+            cvc: "3243",
+          },
+        })
       );
       ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
     }
