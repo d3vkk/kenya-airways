@@ -123,7 +123,7 @@
                   >
                     <div
                       class="text-indigo-600 hover:text-indigo-900"
-                      @click="editBooking(passengerIndex)"
+                      @click="editBooking()"
                     >
                       Edit
                     </div>
@@ -168,54 +168,55 @@ export default {
       localStorage.setItem(
         "ticketData",
         JSON.stringify({
-          tripId: "21A",
-          ticketId: "DSFDFA78",
-          seatNumbers: ["34A", "33A", "35A"],
-          infants: false,
-          petCount: 2,
-          price: 23000,
-          passengerData: [
-            {
-              name: "Felicitas Otolo",
-              dob: "1/11/1990",
-              phoneNumber: "0756785234",
-              email: "felicitas@gmail.com",
+          ticketData: {
+            tripId: "21A",
+            ticketId: "DSFDFA78",
+            seatNumbers: ["34A", "33A", "35A"],
+            infants: false,
+            petCount: 2,
+            price: 23000,
+            passengerData: [
+              {
+                name: "Felicitas Otolo",
+                dob: "1/11/1990",
+                phoneNumber: "0756785234",
+                email: "felicitas@gmail.com",
+              },
+              {
+                name: "Gilbert Jirongo",
+                dob: "4/2/1994",
+                phoneNumber: "0766735464",
+                email: "gilbert@gmail.com",
+              },
+              {
+                name: "Martin Kiplimo",
+                dob: "7/8/1974",
+                phoneNumber: "0766869004",
+                email: "martin@hotmail.com",
+              },
+            ],
+            paymentData: {
+              debitOrCredit: true,
+              cardNumber: "4241313221",
+              name: "Adaer",
+              date: "21/3/2012",
+              cvc: "3243",
             },
-            {
-              name: "Gilbert Jirongo",
-              dob: "4/2/1994",
-              phoneNumber: "0766735464",
-              email: "gilbert@gmail.com",
-            },
-            {
-              name: "Martin Kiplimo",
-              dob: "7/8/1974",
-              phoneNumber: "0766869004",
-              email: "martin@hotmail.com",
-            },
-          ],
-          paymentData: {
-            debitOrCredit: true,
-            cardNumber: "4241313221",
-            name: "Adaer",
-            date: "21/3/2012",
-            cvc: "3243",
           },
         })
       );
       ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
     }
-    this.passengerData = ticketDataStored.passengerData;
-    this.seatNumbers = ticketDataStored.seatNumbers;
+    this.passengerData = ticketDataStored.ticketData.passengerData;
+    this.seatNumbers = ticketDataStored.ticketData.seatNumbers;
   },
   methods: {
-    editBooking(passengerIndex) {
+    editBooking() {
       localStorage.setItem(
         "editPassengerData",
         JSON.stringify({
           editPassengerData: {
-            passengerIndex: passengerIndex,
-            seatNumbers: this.passengerData[passengerIndex].seatNumbers,
+            seatNumbers: this.seatNumbers,
           },
         })
       );

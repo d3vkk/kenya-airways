@@ -26,7 +26,6 @@ export default {
     return {
       editPassengerData: {},
       seatNumbers: null,
-      passengerData: null,
     };
   },
   mounted() {
@@ -40,19 +39,13 @@ export default {
   },
   methods: {
     editBooking() {
-      const passengerDataStored = JSON.parse(
-        localStorage.getItem("passengerData")
-      );
-      if (passengerDataStored != null) {
-        this.passengerData = passengerDataStored.passengerData;
-        const passengerIndex = this.editPassengerData.passengerIndex;
-        this.passengerData[passengerIndex] = {
-          name: this.passengerData[passengerIndex].name,
-          seatNumbers: this.seatNumbers.split(","),
-        };
+      var ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+      if (ticketDataStored != null) {
+        ticketDataStored = ticketDataStored.ticketData;
+        ticketDataStored.seatNumbers = this.seatNumbers.split(",");
         localStorage.setItem(
-          "passengerData",
-          JSON.stringify({ passengerData: this.passengerData })
+          "ticketData",
+          JSON.stringify({ ticketData: ticketDataStored })
         );
         this.$router.push("/admin");
       }
