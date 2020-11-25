@@ -159,6 +159,7 @@ export default {
   data() {
     return {
       sidebarOpen: false,
+      ticketData: null,
       passengerData: {},
     };
   },
@@ -207,8 +208,9 @@ export default {
       );
       ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
     }
-    this.passengerData = ticketDataStored.ticketData.passengerData;
-    this.seatNumbers = ticketDataStored.ticketData.seatNumbers;
+    this.ticketData = ticketDataStored.ticketData;
+    this.passengerData = this.ticketData.passengerData;
+    this.seatNumbers = this.ticketData.seatNumbers;
   },
   methods: {
     editBooking() {
@@ -227,7 +229,16 @@ export default {
       localStorage.setItem(
         "passengerData",
         JSON.stringify({
-          passengerData: this.passengerData,
+          ticketData: {
+            tripId: this.ticketData.tripId,
+            ticketId: this.ticketData.ticketId,
+            seatNumbers: this.ticketData.seatNumbers,
+            infants: this.ticketData.infants,
+            petCount: this.ticketData.petCount,
+            price: this.ticketData.price,
+            passengerData: this.passengerData,
+            paymentData: this.ticketData.paymentData,
+          },
         })
       );
     },
