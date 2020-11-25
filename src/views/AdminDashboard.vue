@@ -238,8 +238,8 @@ export default {
         Kenya Airways - The Pride Of Africa
         Time: ${timeNow}
         Name: ${printPassenger.name}
-        Seat Count: ${printPassenger.seatNumbers.length}
-        Seat Numbers: ${printPassenger.seatNumbers.join(", ")}
+        Seat Count: ${this.seatNumbers.length}
+        Seat Numbers: ${this.seatNumbers.join(", ")}
       `;
 
       const pdf = new jsPDF();
