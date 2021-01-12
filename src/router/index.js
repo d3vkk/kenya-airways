@@ -16,6 +16,11 @@ const routes = [
     component: () => import( /* webpackChunkName: "privacy-policy" */ '../views/PrivacyPolicy.vue')
   },
   {
+    path: '/selectflight',
+    name: 'SelectFlight',
+    component: () => import( /* webpackChunkName: "selectflight" */ '../views/SelectFlight.vue')
+  },
+  {
     path: '/pay',
     name: 'PassPay',
     component: () => import( /* webpackChunkName: "pay" */ '../views/PassPay.vue')
