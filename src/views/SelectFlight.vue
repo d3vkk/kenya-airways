@@ -1,5 +1,6 @@
 <template>
     <div>
+    <NavBar />
          <div class="container">
       <span style="font-weight: bold;">select flight</span>
       <span style="float: right; font-weight: bold;">Step 2 0f 4</span>
@@ -319,13 +320,21 @@
         </div>
       </a>
     </div>
+    <FooterSection />
     </div>
 </template>
 
 <script>
 import "../../public/vendor/bootstrap.min.css";
+import NavBar from "../layouts/NavBar";
+import FooterSection from "../layouts/FooterSection";
 
-export default {};
+export default {
+  components: {
+    NavBar,
+    FooterSection,
+  },
+};
 </script>
 
 <style scoped>
