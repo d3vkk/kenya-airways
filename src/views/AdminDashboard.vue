@@ -152,6 +152,7 @@
 </template>
 
 <script>
+import "../../public/vendor/tailwind.min.css";
 import { jsPDF } from "jspdf";
 
 export default {

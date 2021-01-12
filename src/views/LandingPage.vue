@@ -74,6 +74,7 @@
 </template>
 
 <script>
+import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
 import FooterSection from "../layouts/FooterSection";
 export default {

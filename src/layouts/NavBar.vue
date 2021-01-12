@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import "../../public/vendor/tailwind.min.css";
+
 export default {};
 </script>
 

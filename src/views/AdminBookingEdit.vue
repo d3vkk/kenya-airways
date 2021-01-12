@@ -20,6 +20,8 @@
 </template>
 
 <script>
+import "../../public/vendor/tailwind.min.css";
+
 export default {
   name: "admin-booking-edit",
   data() {

@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import "../../public/vendor/tailwind.min.css";
+
 import NavBar from "../layouts/NavBar";
 export default {
   name: "pass-pay",
