@@ -3,32 +3,32 @@
     <div
       :class="sidebarOpen ? 'block' : 'hidden'"
       @click="sidebarOpen = false"
-      class="fixed z-20 inset-0 bg-black opacity-50 transition-opacity lg:hidden"
+      class="fixed inset-0 z-20 transition-opacity bg-black opacity-50 lg:hidden"
     ></div>
 
     <div
       :class="
         sidebarOpen ? 'translate-x-0 ease-out' : '-translate-x-full ease-in'
       "
-      class="fixed z-30 inset-y-0 left-0 w-64 transition duration-300 transform bg-red-800 overflow-y-auto lg:translate-x-0 lg:static lg:inset-0"
+      class="fixed inset-y-0 left-0 z-30 w-64 overflow-y-auto transition duration-300 transform bg-red-800 lg:translate-x-0 lg:static lg:inset-0"
     >
-      <div class="text-center mt-4">
-        <router-link class="text-white text-xl uppercase" to="/"
+      <div class="mt-4 text-center">
+        <router-link class="text-xl text-white uppercase" to="/"
           >Kenya Airways</router-link
         >
       </div>
       <nav>
-        <div class="flex items-center mt-4 py-2 px-6 text-white">
+        <div class="flex items-center px-6 py-2 mt-4 text-white">
           <span class="mx-4">Bookings</span>
         </div>
-        <div class="flex items-center mt-4 py-2 px-6 text-white">
+        <div class="flex items-center px-6 py-2 mt-4 text-white">
           <span class="mx-4">Logout</span>
         </div>
       </nav>
     </div>
-    <div class="flex-1 flex flex-col">
+    <div class="flex flex-col flex-1">
       <header
-        class="flex justify-between items-center py-4 px-6 bg-white border-b-4 border-red-800"
+        class="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-red-800"
       >
         <div class="flex items-center">
           <button
@@ -36,7 +36,7 @@
             class="text-gray-500 focus:outline-none lg:hidden"
           >
             <svg
-              class="h-6 w-6"
+              class="w-6 h-6"
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -57,18 +57,18 @@
           <a href="mailto:contact@kenyaairways.com" class="mx-4">Email us</a>
         </div>
       </header>
-      <div class="mt-8 flex flex-col mt-6">
-        <div class="my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
-          <div class="flex flex-row justify-end items-end">
+      <div class="flex flex-col mt-6 mt-8">
+        <div class="py-2 my-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
+          <div class="flex flex-row items-end justify-end">
             <router-link
-              class="px-3 py-1 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 my-3"
+              class="px-3 py-1 my-3 ml-3 font-medium tracking-wide text-white bg-black rounded-md hover:bg-red-800"
               to="/createbooking"
             >
               Create Booking
             </router-link>
           </div>
           <div
-            class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
+            class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg"
           >
             <table class="min-w-full">
               <thead class="bg-gray-300">
@@ -94,7 +94,7 @@
                     <div class="flex items-center">
                       <div class="m-4">
                         <div
-                          class="text-sm leading-5 font-medium text-gray-900"
+                          class="text-sm font-medium leading-5 text-gray-900"
                           v-html="passenger.name"
                         ></div>
                       </div>
@@ -114,12 +114,12 @@
                     <span
                       v-for="(seatNumber, seatNumbersIndex) in seatNumbers"
                       :key="seatNumbersIndex"
-                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
                       >{{ seatNumber }}</span
                     >
                   </td>
                   <td
-                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200"
                   >
                     <div
                       class="text-indigo-600 hover:text-indigo-900"
@@ -130,13 +130,13 @@
                   </td>
 
                   <td
-                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200"
                     @click="deleteBooking(passengerIndex)"
                   >
                     <div class="text-red-600 hover:text-red-900">Delete</div>
                   </td>
                   <td
-                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200"
                     @click="printBooking(passengerIndex)"
                   >
                     <div class="text-green-600 hover:text-green-900">Print</div>

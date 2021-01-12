@@ -1,11 +1,11 @@
 <template>
   <div id="pay-form">
     <NavBar />
-    <div class="flex flex-row justify-center items-center">
-      <div class="container max-w-xs p-8 m-8 shadow-lg bg-white">
+    <div class="flex flex-row items-center justify-center">
+      <div class="container max-w-xs p-8 m-8 bg-white shadow-lg">
         <div class="pl-2 text-2xl">Pay with Visa</div>
         <form @submit.prevent="payWithVisa">
-          <div class="mb-4 mt-4 p-2">
+          <div class="p-2 mt-4 mb-4">
             <div class="mb-2">Card Type</div>
             <input
               class="mr-1"
@@ -22,7 +22,7 @@
             />
             <span class="mr-2">Credit</span>
           </div>
-          <div class="mb-4 mt-4 p-2">
+          <div class="p-2 mt-4 mb-4">
             <div class="mb-2">Card Number</div>
             <input
               type="text"
@@ -33,7 +33,7 @@
               v-model="cardNumber"
             />
           </div>
-          <div class="mb-4 mt-4 p-2">
+          <div class="p-2 mt-4 mb-4">
             <div class="mb-2">Name</div>
             <input
               type="text"
@@ -44,11 +44,11 @@
               v-model="nameInput"
             />
           </div>
-          <div class="mb-4 mt-4 p-2">
+          <div class="p-2 mt-4 mb-4">
             <div class="mb-2">Date</div>
             <input type="date" required v-model="dateInput" />
           </div>
-          <div class="mb-4 mt-4 p-2">
+          <div class="p-2 mt-4 mb-4">
             <div class="mb-2">CVC</div>
             <input
               type="text"
@@ -60,7 +60,7 @@
           </div>
           <div class="flex flex-row">
             <button
-              class="p-2 bg-black rounded-md text-white font-medium tracking-wide hover:bg-black ml-3 text-sm"
+              class="p-2 ml-3 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-black"
               type="submit"
             >
               Pay

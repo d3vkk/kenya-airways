@@ -13,55 +13,55 @@
         <div id="hero-slogan" class="absolute">The Pride of Africa</div>
       </div>
     </div>
-    <div class="my-8 flex flex-row justify-center items-center">
+    <div class="flex flex-row items-center justify-center my-8">
       <form
         @submit.prevent="searchFlight()"
-        class="shadow-lg p-4 bg-white absolute"
+        class="absolute p-4 bg-white shadow-lg"
         style="top: 26rem"
       >
         <div class="flex flex-row">
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <div class="mb-2">From</div>
             <input type="text" autocomplete required v-model="fromLocation" />
           </div>
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <div class="mb-2">To</div>
             <input type="text" autocomplete required v-model="toLocation" />
           </div>
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <div class="mb-2">Depart</div>
             <input type="time" autocomplete required v-model="departTime" />
           </div>
         </div>
         <div class="flex flex-row">
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <span class="mr-2">Adults</span>
-            <button class="px-2 mr-2 font-bold bg-black text-white rounded">
+            <button class="px-2 mr-2 font-bold text-white bg-black rounded">
               -
             </button>
             <span ref="adultsCount">1</span>
-            <button class="px-2 ml-2 font-bold bg-black text-white rounded">
+            <button class="px-2 ml-2 font-bold text-white bg-black rounded">
               +
             </button>
           </div>
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <span class="mr-2">Children</span>
-            <button class="px-2 mr-2 font-bold bg-black text-white rounded">
+            <button class="px-2 mr-2 font-bold text-white bg-black rounded">
               -
             </button>
             <span ref="childrenCount">1</span>
-            <button class="px-2 ml-2 font-bold bg-black text-white rounded">
+            <button class="px-2 ml-2 font-bold text-white bg-black rounded">
               +
             </button>
           </div>
-          <div class="mb-4 mt-4 p-2 w-1/3">
+          <div class="w-1/3 p-2 mt-4 mb-4">
             <span class="mr-2">Infants</span>
             <input type="checkbox" name="infants" v-model="infants" />
           </div>
         </div>
         <div class="text-center">
           <button
-            class="p-2 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 text-sm"
+            class="p-2 ml-3 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-red-800"
             type="submit"
           >
             Search Flight

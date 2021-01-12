@@ -2,22 +2,22 @@
   <footer>
     <div
       id="first-footer"
-      class="px-3 py-6 flex flex-col md:flex-row lg:flex-row"
+      class="flex flex-col px-3 py-6 md:flex-row lg:flex-row"
     >
-      <div class="w-full md:w-1/4 lg:w-1/4 pb-6">
-        <div class="footer-title pb-1">Useful&nbsp;Links</div>
+      <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
+        <div class="pb-1 footer-title">Useful&nbsp;Links</div>
         <div class="pb-1"><router-link to="\careers">Career</router-link></div>
         <div class="pb-1"><a href="#book">Booking&nbsp;Inquiry</a></div>
         <div class="pb-1"><a href="#search">View&nbsp;Ticket</a></div>
       </div>
-      <div class="w-full md:w-1/4 lg:w-1/4 pb-6">
-        <div class="footer-title pb-1">More&nbsp;Info</div>
+      <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
+        <div class="pb-1 footer-title">More&nbsp;Info</div>
         <div class="pb-1">Baggage&nbsp;Information</div>
         <div class="pb-1">Pet&nbsp;Information</div>
         <div class="pb-1">Flight&nbsp;Information</div>
       </div>
-      <div class="w-full md:w-1/4 lg:w-1/4 pb-6">
-        <div class="footer-title pb-1">About&nbsp;Us</div>
+      <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
+        <div class="pb-1 footer-title">About&nbsp;Us</div>
         <div class="pb-1">
           <router-link to="/privacy-policy">Privacy&nbsp;Policy</router-link>
         </div>
@@ -27,8 +27,8 @@
         </div>
         <div class="pb-1">About&nbsp;Us</div>
       </div>
-      <div class="w-full md:w-1/4 lg:w-1/4 pb-6">
-        <div class="footer-title pb-1">Follow&nbsp;Us</div>
+      <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
+        <div class="pb-1 footer-title">Follow&nbsp;Us</div>
         <div class="pb-1">
           <a
             href="https://www.facebook.com/KenyaAirwaysKE/"

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-row justify-between shadow-md items-center px-3 bg-white"
+    class="flex flex-row items-center justify-between px-3 bg-white shadow-md"
   >
     <router-link to="/">
       <img
@@ -9,7 +9,7 @@
         style="height: 3rem; width: 3rem"
       />
     </router-link>
-    <div class="flex flex-row justify-between items-center">
+    <div class="flex flex-row items-center justify-between">
       <div class="mr-3">About us</div>
       <div>Contact us</div>
     </div>

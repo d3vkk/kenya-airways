@@ -2,13 +2,13 @@
   <div class="container max-w-xs p-8">
     <div class="pl-2 text-2xl">Edit Booking</div>
     <form @submit.prevent="editBooking">
-      <div class="mb-4 mt-4 p-2">
+      <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Seat Numbers</div>
         <input type="text" autocomplete required v-model="seatNumbers" />
       </div>
       <div class="flex flex-row">
         <button
-          class="p-2 bg-black rounded-md text-white font-medium tracking-wide hover:bg-red-800 ml-3 text-sm"
+          class="p-2 ml-3 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-red-800"
           type="submit"
         >
           Edit

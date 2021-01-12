@@ -1,8 +1,8 @@
 <template>
   <div class="flex h-screen font-roboto">
-    <div class="flex-1 flex flex-col">
+    <div class="flex flex-col flex-1">
       <header
-        class="flex justify-between items-center py-4 px-6 bg-white border-b-4 border-red-800"
+        class="flex items-center justify-between px-6 py-4 bg-white border-b-4 border-red-800"
       >
         <div class="flex items-center">
           <router-link to="/">
@@ -19,13 +19,13 @@
           <a href="mailto:contact@kenyaairways.com" class="mx-4">Email us</a>
         </div>
       </header>
-      <div class="mt-8 flex flex-col">
-        <div class="my-2 py-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
+      <div class="flex flex-col mt-8">
+        <div class="py-2 my-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
           <div class="my-2 text-gray-600">
             To add or delete a booking, please contact us via phone or email
           </div>
           <div
-            class="align-middle inline-block min-w-full shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
+            class="inline-block min-w-full overflow-hidden align-middle border-b border-gray-200 shadow sm:rounded-lg"
           >
             <table class="min-w-full">
               <thead class="bg-gray-300">
@@ -51,7 +51,7 @@
                     <div class="flex items-center">
                       <div class="m-4">
                         <div
-                          class="text-sm leading-5 font-medium text-gray-900"
+                          class="text-sm font-medium leading-5 text-gray-900"
                           v-html="passenger.name"
                         ></div>
                       </div>
@@ -63,7 +63,7 @@
                     <div class="flex items-center">
                       <div class="m-4">
                         <div
-                          class="text-sm leading-5 font-medium text-gray-900"
+                          class="text-sm font-medium leading-5 text-gray-900"
                           v-html="passenger.dob"
                         ></div>
                       </div>
@@ -75,7 +75,7 @@
                     <div class="flex items-center">
                       <div class="m-4">
                         <div
-                          class="text-sm leading-5 font-medium text-gray-900"
+                          class="text-sm font-medium leading-5 text-gray-900"
                           v-html="passenger.phoneNumber"
                         ></div>
                         <div class="text-sm leading-5 text-gray-500">
@@ -88,12 +88,12 @@
                     class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
                   >
                     <span
-                      class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
+                      class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
                       >{{ passenger.seatNumber }}</span
                     >
                   </td>
                   <td
-                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200"
                   >
                     <div
                       class="text-indigo-600 hover:text-indigo-900"
@@ -104,7 +104,7 @@
                   </td>
 
                   <td
-                    class="px-6 py-4 whitespace-no-wrap text-right border-b border-gray-200 text-sm leading-5 font-medium"
+                    class="px-6 py-4 text-sm font-medium leading-5 text-right whitespace-no-wrap border-b border-gray-200"
                     @click="printBooking(passengerIndex)"
                   >
                     <div class="text-green-600 hover:text-green-900">Print</div>
