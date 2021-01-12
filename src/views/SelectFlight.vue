@@ -66,9 +66,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #1410c6">
+          <div class="card card2" style="border-color: #0099FF">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #1410c6">
+              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -78,9 +78,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #c61010">
+          <div class="card card2" style="border-color: #E91D24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #c61010">
+              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -153,9 +153,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #1410c6">
+          <div class="card card2" style="border-color: #0099FF">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #1410c6">
+              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -165,9 +165,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #c61010">
+          <div class="card card2" style="border-color: #E91D24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #c61010">
+              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -240,9 +240,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #1410c6">
+          <div class="card card2" style="border-color: #0099FF">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #1410c6">
+              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -252,9 +252,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #c61010">
+          <div class="card card2" style="border-color: #E91D24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #c61010">
+              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -327,9 +327,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #1410c6">
+          <div class="card card2" style="border-color: #0099FF">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #1410c6">
+              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -339,9 +339,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #c61010">
+          <div class="card card2" style="border-color: #E91D24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #c61010">
+              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -414,9 +414,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #1410c6">
+          <div class="card card2" style="border-color: #0099FF">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #1410c6">
+              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -426,9 +426,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #c61010">
+          <div class="card card2" style="border-color: #E91D24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #c61010">
+              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
