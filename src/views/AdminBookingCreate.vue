@@ -5,6 +5,7 @@
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Passenger Name</div>
         <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
           type="text"
           maxlength="50"
           autocomplete
@@ -14,7 +15,13 @@
       </div>
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Seat Numbers</div>
-        <input type="text" autocomplete required v-model="seatNumbers" />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+          type="text"
+          autocomplete
+          required
+          v-model="seatNumbers"
+        />
       </div>
       <div class="flex flex-row">
         <button
@@ -66,11 +73,4 @@ export default {
 </script>
 
 <style scoped>
-input,
-select {
-  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
-}
-select {
-  @apply bg-white text-black;
-}
 </style>
