@@ -107,4 +107,7 @@ export default {};
 </script>
 
 <style scoped>
+a {
+  color: #000000;
+}
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <div class="container">
+    <div class="container" style=" font-family: 'Lato', sans-serif;">
       <span style="font-weight: bold">select flight</span>
       <span style="float: right; font-weight: bold">Step 2 0f 4</span>
       <hr style="width: 100%; background-color: black" />
