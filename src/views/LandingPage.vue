@@ -81,6 +81,11 @@ export default {
       infants: false,
     };
   },
+  methods: {
+    searchFlight() {
+      this.$router.push("/selectflight");
+    },
+  },
 };
 </script>
 
