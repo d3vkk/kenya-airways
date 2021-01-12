@@ -17,19 +17,20 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
+#hero-image {
+    background: url('../../../public/img/hero.webp') center center no-repeat;
+    height: 500px;
+}
+
 #hero-title {
     color: var(--red);
     font-size: var(--big);
-    top: 7rem;
-    left: 1.5rem;
+    font-weight: bold;
 }
 
 #hero-slogan {
-    /* color:var(--white); */
     color: var(--black);
     font-size: var(--normal);
-    top: 10rem;
-    left: 7.1rem;
 }
 
 footer svg {
