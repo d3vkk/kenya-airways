@@ -103,7 +103,7 @@ export default {
   data() {
     return {
       stepTitle: "Pay With Visa",
-      stepNumber: 3,
+      stepNumber: 4,
       stepInfo: null,
       paymentData: null,
       cardNumber: null,
