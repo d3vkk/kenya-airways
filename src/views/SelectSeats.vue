@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <StepSection />
+    <StepSection :stepInfo="stepInfo" />
     <div class="flex flex-row justify-center m-8">
       <div class="p-4 shadow">
         <div>
@@ -109,6 +109,19 @@ export default {
     SeatTypeA,
     SeatTypeB,
     FooterSection,
+  },
+  data() {
+    return {
+      stepTitle: "Select Seats",
+      stepNumber: 2,
+      stepInfo: null,
+    };
+  },
+  mounted() {
+    this.stepInfo = {
+      stepTitle: this.stepTitle,
+      stepNumber: this.stepNumber,
+    };
   },
 };
 </script>
