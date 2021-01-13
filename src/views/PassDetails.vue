@@ -10,12 +10,12 @@
               class="text-white card col-sm-3"
               style="float: right; background-color: #e91d24; height: 30px"
             >
-              <p class="card-text mx-auto">Ksh 70,000</p>
+              <p class="mx-auto card-text">Ksh 70,000</p>
             </div>
           </div>
           <form class="mx-3">
             <label>Name</label>
-            <div class="form-row mb-3">
+            <div class="mb-3 form-row">
               <div class="col">
                 <input
                   type="text"
@@ -38,7 +38,7 @@
                 />
               </div>
             </div>
-            <div class="form-row mb-3">
+            <div class="mb-3 form-row">
               <div class="form-group col-md-6">
                 <label for="inputGender">Gender</label>
                 <select id="inputGender" class="form-control">
@@ -71,7 +71,7 @@
               </div>
             </div>
 
-            <div class="form-row mb-3">
+            <div class="mb-3 form-row">
               <div class="form-group col-md-6">
                 <label for="inputCity">City</label>
                 <input type="text" class="form-control" id="inputCity" />
@@ -129,7 +129,7 @@
               class="text-white card col-sm-3"
               style="float: right; background-color: #e91d24; height: 30px"
             >
-              <p class="card-text mx-auto">Proceed to payment</p>
+              <p class="mx-auto card-text">Proceed to payment</p>
             </div>
           </div>
         </div>
