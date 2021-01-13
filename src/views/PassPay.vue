@@ -1,88 +1,93 @@
 <template>
-  <div id="pay-form">
+  <div>
     <NavBar />
-    <div class="flex flex-row items-center justify-center">
-      <div class="container max-w-xs p-8 m-8 bg-white shadow-lg">
-        <div class="pl-2 text-2xl">Pay with Visa</div>
-        <form @submit.prevent="payWithVisa">
-          <div class="p-2 mt-4 mb-4">
-            <div class="mb-2">Card Type</div>
-            <input
-              class="mr-1"
-              type="radio"
-              name="debitOrCredit"
-              @change="debitOrCredit(true)"
-            />
-            <span class="mr-2">Debit</span>
-            <input
-              class="mr-1"
-              type="radio"
-              name="debitOrCredit"
-              @change="debitOrCredit(false)"
-            />
-            <span class="mr-2">Credit</span>
-          </div>
-          <div class="p-2 mt-4 mb-4">
-            <div class="mb-2">Card Number</div>
-            <input
-              type="text"
-              minlength="12"
-              maxlength="16"
-              autocomplete
-              required
-              v-model="cardNumber"
-            />
-          </div>
-          <div class="p-2 mt-4 mb-4">
-            <div class="mb-2">Name</div>
-            <input
-              type="text"
-              minlength="4"
-              maxlength="50"
-              autocomplete
-              required
-              v-model="nameInput"
-            />
-          </div>
-          <div class="p-2 mt-4 mb-4">
-            <div class="mb-2">Date</div>
-            <input type="date" required v-model="dateInput" />
-          </div>
-          <div class="p-2 mt-4 mb-4">
-            <div class="mb-2">CVC</div>
-            <input
-              type="text"
-              minlength="3"
-              maxlength="3"
-              required
-              v-model="cvc"
-            />
-          </div>
-          <div class="flex flex-row">
-            <button
-              class="p-2 ml-3 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-black"
-              type="submit"
-            >
-              Pay
-            </button>
-            <div>
-              <div class="p-2">Cancel</div>
+    <div id="pay-form" class="my-1">
+      <div class="flex flex-row items-center justify-center">
+        <div class="container max-w-xs p-8 m-8 bg-white shadow-lg">
+          <div class="pl-2 text-2xl">Pay with Visa</div>
+          <form @submit.prevent="payWithVisa">
+            <div class="p-2 mt-4 mb-4">
+              <div class="mb-2">Card Type</div>
+              <input
+                class="mr-1"
+                type="radio"
+                name="debitOrCredit"
+                @change="debitOrCredit(true)"
+              />
+              <span class="mr-2">Debit</span>
+              <input
+                class="mr-1"
+                type="radio"
+                name="debitOrCredit"
+                @change="debitOrCredit(false)"
+              />
+              <span class="mr-2">Credit</span>
             </div>
-          </div>
-        </form>
+            <div class="p-2 mt-4 mb-4">
+              <div class="mb-2">Card Number</div>
+              <input
+                type="text"
+                minlength="12"
+                maxlength="16"
+                autocomplete
+                required
+                v-model="cardNumber"
+              />
+            </div>
+            <div class="p-2 mt-4 mb-4">
+              <div class="mb-2">Name</div>
+              <input
+                type="text"
+                minlength="4"
+                maxlength="50"
+                autocomplete
+                required
+                v-model="nameInput"
+              />
+            </div>
+            <div class="p-2 mt-4 mb-4">
+              <div class="mb-2">Date</div>
+              <input type="date" required v-model="dateInput" />
+            </div>
+            <div class="p-2 mt-4 mb-4">
+              <div class="mb-2">CVC</div>
+              <input
+                type="text"
+                minlength="3"
+                maxlength="3"
+                required
+                v-model="cvc"
+              />
+            </div>
+            <div class="flex flex-row">
+              <button
+                class="p-2 ml-3 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-black"
+                type="submit"
+              >
+                Pay
+              </button>
+              <div>
+                <div class="p-2">Cancel</div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <FooterSection />
   </div>
 </template>
 
 <script>
 import "../../public/vendor/tailwind.min.css";
-
 import NavBar from "../layouts/NavBar";
+import FooterSection from "../layouts/FooterSection";
+
 export default {
   name: "pass-pay",
   components: {
     NavBar,
+    FooterSection,
   },
   data() {
     return {
