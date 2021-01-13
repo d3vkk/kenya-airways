@@ -1,7 +1,7 @@
 <template>
   <div>
     <NavBar />
-    <div class="container" style=" font-family: 'Lato', sans-serif;">
+    <div class="container" style="font-family: 'Lato', sans-serif">
       <span style="font-weight: bold">select flight</span>
       <span style="float: right; font-weight: bold">Step 2 0f 4</span>
       <hr style="width: 100%; background-color: black" />
@@ -66,9 +66,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #0099FF">
+          <div class="card card2" style="border-color: #0099ff">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
+              <h5 class="card-title" style="font-weight: bold; color: #0099ff">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -78,9 +78,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #E91D24">
+          <div class="card card2" style="border-color: #e91d24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
+              <h5 class="card-title" style="font-weight: bold; color: #e91d24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -153,9 +153,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #0099FF">
+          <div class="card card2" style="border-color: #0099ff">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
+              <h5 class="card-title" style="font-weight: bold; color: #0099ff">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -165,9 +165,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #E91D24">
+          <div class="card card2" style="border-color: #e91d24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
+              <h5 class="card-title" style="font-weight: bold; color: #e91d24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -240,9 +240,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #0099FF">
+          <div class="card card2" style="border-color: #0099ff">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
+              <h5 class="card-title" style="font-weight: bold; color: #0099ff">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -252,9 +252,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #E91D24">
+          <div class="card card2" style="border-color: #e91d24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
+              <h5 class="card-title" style="font-weight: bold; color: #e91d24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -327,9 +327,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #0099FF">
+          <div class="card card2" style="border-color: #0099ff">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
+              <h5 class="card-title" style="font-weight: bold; color: #0099ff">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -339,9 +339,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #E91D24">
+          <div class="card card2" style="border-color: #e91d24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
+              <h5 class="card-title" style="font-weight: bold; color: #e91d24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -414,9 +414,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #0099FF">
+          <div class="card card2" style="border-color: #0099ff">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #0099FF">
+              <h5 class="card-title" style="font-weight: bold; color: #0099ff">
                 Business
               </h5>
               <div style="margin-top: 3rem">
@@ -426,9 +426,9 @@
             </div>
           </div>
 
-          <div class="card card2" style="border-color: #E91D24">
+          <div class="card card2" style="border-color: #e91d24">
             <div class="card-body">
-              <h5 class="card-title" style="font-weight: bold; color: #E91D24">
+              <h5 class="card-title" style="font-weight: bold; color: #e91d24">
                 First Class
               </h5>
               <div style="margin-top: 3rem">
@@ -439,6 +439,15 @@
           </div>
         </div>
       </a>
+      <div class="mx-4 mt-5 mb-4">
+        <h3>Fare conditions</h3>
+        Note: Upgrade prices and seat selection are only applicable to Kenya
+        airways operated flights. View our seat selection rules and rates.
+        Important: Change fees will be charged in addition to any applicable
+        fare difference. The amounts quoted for refunds, change fees, Miles
+        earned or upgrades are per person. Upgrades with Miles are subject to
+        availability on Emirates operated flights only.
+      </div>
     </div>
     <FooterSection />
   </div>
