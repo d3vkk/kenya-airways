@@ -2,9 +2,7 @@
   <div>
     <NavBar />
     <div class="container" style="font-family: 'Lato', sans-serif">
-      <span style="font-weight: bold">select flight</span>
-      <span style="float: right; font-weight: bold">Step 2 0f 4</span>
-      <hr style="width: 100%; background-color: black" />
+    <StepSection :stepInfo="stepInfo" />
       <!-- Flight row 1 -->
       <a href="/selectfight.html" style="color: inherit; text-decoration: none">
         <div class="mb-3 ml-4 mr-0 card-deck col">
@@ -456,12 +454,27 @@
 <script>
 import "../../public/vendor/bootstrap.min.css";
 import NavBar from "../layouts/NavBar";
+import StepSection from "../layouts/StepSection";
 import FooterSection from "../layouts/FooterSection";
 
 export default {
   components: {
     NavBar,
+    StepSection,
     FooterSection,
+  },
+  data() {
+    return {
+      stepTitle: "Select Flight",
+      stepNumber: 1,
+      stepInfo: null,
+    };
+  },
+  mounted() {
+    this.stepInfo = {
+      stepTitle: this.stepTitle,
+      stepNumber: this.stepNumber,
+    };
   },
 };
 </script>
