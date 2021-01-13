@@ -11,7 +11,7 @@ const routes = [
     component: LandingPage
   },
   {
-    path: '/privacy-policy',
+    path: '/privacypolicy',
     name: 'PrivacyPolicy',
     component: () => import( /* webpackChunkName: "privacy-policy" */ '../views/PrivacyPolicy.vue')
   },
