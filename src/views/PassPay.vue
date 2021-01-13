@@ -2,6 +2,7 @@
   <div>
     <NavBar />
     <div id="pay-form" class="my-1">
+      <StepSectionWhite :stepInfo="stepInfo" />
       <div class="flex flex-row items-center justify-center">
         <div class="container max-w-xs p-8 m-8 bg-white shadow-lg">
           <div class="pl-2 text-2xl">Pay with Visa</div>
@@ -89,22 +90,33 @@
 <script>
 import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
+import StepSectionWhite from "../layouts/StepSectionWhite";
 import FooterSection from "../layouts/FooterSection";
 
 export default {
   name: "pass-pay",
   components: {
     NavBar,
+    StepSectionWhite,
     FooterSection,
   },
   data() {
     return {
+      stepTitle: "Pay With Visa",
+      stepNumber: 3,
+      stepInfo: null,
       paymentData: null,
       cardNumber: null,
       nameInput: null,
       dateInput: null,
       cvc: null,
       debitOrCreditChosen: null,
+    };
+  },
+  mounted() {
+    this.stepInfo = {
+      stepTitle: this.stepTitle,
+      stepNumber: this.stepNumber,
     };
   },
   methods: {
