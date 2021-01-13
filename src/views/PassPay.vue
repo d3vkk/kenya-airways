@@ -26,6 +26,7 @@
             <div class="p-2 mt-4 mb-4">
               <div class="mb-2">Card Number</div>
               <input
+                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
                 type="text"
                 minlength="12"
                 maxlength="16"
@@ -37,6 +38,7 @@
             <div class="p-2 mt-4 mb-4">
               <div class="mb-2">Name</div>
               <input
+                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
                 type="text"
                 minlength="4"
                 maxlength="50"
@@ -47,11 +49,17 @@
             </div>
             <div class="p-2 mt-4 mb-4">
               <div class="mb-2">Date</div>
-              <input type="date" required v-model="dateInput" />
+              <input
+                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+                type="date"
+                required
+                v-model="dateInput"
+              />
             </div>
             <div class="p-2 mt-4 mb-4">
               <div class="mb-2">CVC</div>
               <input
+                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
                 type="text"
                 minlength="3"
                 maxlength="3"
@@ -122,15 +130,6 @@ export default {
 </script>
 
 <style scoped>
-input[type="text"],
-input[type="date"],
-select {
-  @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
-}
-select {
-  @apply bg-white text-black;
-}
-
 #pay-form {
   background: url("../../public/img/hero.webp") center center;
 }
