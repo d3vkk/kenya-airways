@@ -2,6 +2,7 @@
   <div>
     <NavBar />
     <div id="passenger-details" class="my-1">
+      <StepSectionWhite :stepInfo="stepInfo" />
       <div class="container py-5">
         <div class="card card1 col-sm-8">
           <div class="mt-4">
@@ -142,12 +143,27 @@
 <script>
 import "../../public/vendor/bootstrap.min.css";
 import NavBar from "../layouts/NavBar";
+import StepSectionWhite from "../layouts/StepSectionWhite";
 import FooterSection from "../layouts/FooterSection";
 
 export default {
   components: {
     NavBar,
+    StepSectionWhite,
     FooterSection,
+  },
+  data() {
+    return {
+      stepTitle: "Passenger Details, Baggage and Pets",
+      stepNumber: 3,
+      stepInfo: null,
+    };
+  },
+  mounted() {
+    this.stepInfo = {
+      stepTitle: this.stepTitle,
+      stepNumber: this.stepNumber,
+    };
   },
 };
 </script>
