@@ -43,28 +43,26 @@ export default {
   name: "admin-booking-create",
   data() {
     return {
-      createPassengerData: {},
       passengerName: null,
       seatNumbers: null,
-      passengerData: null,
     };
   },
   methods: {
     createBooking() {
-      const passengerDataStored = JSON.parse(
-        localStorage.getItem("passengerData")
-      );
-      this.passengerData =
-        passengerDataStored == null ? [] : passengerDataStored.passengerData;
-      const passengerDataLength = this.passengerData.length;
+      const ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+      const ticketData =
+        ticketDataStored == null ? [] : ticketDataStored.ticketData;
 
-      this.passengerData[passengerDataLength] = {
+      const passengerData = ticketData.passengerData;
+      passengerData[passengerData.length] = {
         name: this.passengerName,
-        seatNumbers: this.seatNumbers.split(","),
       };
+
+      ticketData.seatNumbers.push(...this.seatNumbers.split(","));
+
       localStorage.setItem(
-        "passengerData",
-        JSON.stringify({ passengerData: this.passengerData })
+        "ticketData",
+        JSON.stringify({ ticketData: ticketData })
       );
       this.$router.push("/admin");
     },
