@@ -1,5 +1,5 @@
 <template>
-  <div class="mr-1">
+  <div class="seat-type-a p-1 mr-1">
     <img
       src="../../public/img/seat-gray.png"
       alt=""
@@ -15,4 +15,7 @@ export default {};
 </script>
 
 <style scoped>
+.seat-type-a:hover {
+  background-color: #e91d24;
+}
 </style>
