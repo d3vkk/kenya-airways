@@ -4,19 +4,43 @@
     <form @submit.prevent="editBooking">
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Name</div>
-        <input type="text" autocomplete required v-model="nameInput" />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+          type="text"
+          autocomplete
+          required
+          v-model="nameInput"
+        />
       </div>
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Date of Birth</div>
-        <input type="date" autocomplete required v-model="dob" />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+          type="date"
+          autocomplete
+          required
+          v-model="dob"
+        />
       </div>
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Phone Number</div>
-        <input type="text" autocomplete required v-model="phoneNumber" />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+          type="text"
+          autocomplete
+          required
+          v-model="phoneNumber"
+        />
       </div>
       <div class="p-2 mt-4 mb-4">
         <div class="mb-2">Email</div>
-        <input type="email" autocomplete required v-model="email" />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight"
+          type="email"
+          autocomplete
+          required
+          v-model="email"
+        />
       </div>
       <div class="flex flex-row">
         <button
