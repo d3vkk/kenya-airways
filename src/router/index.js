@@ -60,6 +60,11 @@ const routes = [
     name: 'PassBookingEdit',
     component: () => import( /* webpackChunkName: "editbooking" */ '../views/PassBookingEdit.vue')
   },
+  {
+    path: '/careers',
+    name: 'Careers',
+    component: () => import( /* webpackChunkName: "careers" */ '../views/Careers.vue')
+  },
 ]
 
 const router = new VueRouter({
