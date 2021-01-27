@@ -77,6 +77,8 @@
               <thead class="bg-gray-300">
                 <tr>
                   <th>Name</th>
+                  <th>D.O.B</th>
+                  <th>Contacts</th>
                   <th>Seat&nbsp;Count</th>
                   <th>Seat&nbsp;Numbers</th>
                   <th>Edit</th>
@@ -100,6 +102,33 @@
                           class="text-sm font-medium leading-5 text-gray-900"
                           v-html="passenger.name"
                         ></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                  >
+                    <div class="flex items-center">
+                      <div class="m-4">
+                        <div
+                          class="text-sm font-medium leading-5 text-gray-900"
+                          v-html="passenger.dob"
+                        ></div>
+                      </div>
+                    </div>
+                  </td>
+                  <td
+                    class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
+                  >
+                    <div class="flex items-center">
+                      <div class="m-4">
+                        <div
+                          class="text-sm font-medium leading-5 text-gray-900"
+                          v-html="passenger.phoneNumber"
+                        ></div>
+                        <div class="text-sm leading-5 text-gray-500">
+                          {{ passenger.email }}
+                        </div>
                       </div>
                     </div>
                   </td>
