@@ -2,7 +2,7 @@
   <div>
     <NavBar />
     <div>
-      <header id="header" class="header my-1">
+      <header id="header" class="my-1 header">
         <div class="header-content">
           <div class="text-white">
             <h2 style="font-size: 2.5rem">Explore a world of opportunities</h2>
@@ -18,13 +18,13 @@
       <div>
         <div class="px-3 py-6">
           <h1 style="font-size: 2.5rem">Jobs</h1>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link href="job.html"
               ><p>Pacific Coordination Center Senior Manager</p>
               <p>NARITA, Japan</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>
                 Talent Acquisition Specialist - Applicant Tracking System
@@ -33,91 +33,91 @@
               <p>ATLANTA, Georgia</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>LOS ANGELES, California</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>DETROIT, Michigan</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>SEATTLE, Washington</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>LOS ANGELES, California</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>MINNEAPOLIS, Minnesota</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>SEATTLE, Washington</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>ATLANTA, Georgia</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>ATLANTA, Georgia</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>SALT LAKE CITY, Utah</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>SALT LAKE CITY, Utah</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Cargo Maintenance Technician</p>
               <p>MINNEAPOLIS, Minnesota</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Lead Cargo Maintenance Technician</p>
               <p>DETROIT, Michigan</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Senior Business Analyst, API</p>
               <p>ATLANTA, Georgia</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Senior Analyst- Government Affairs</p>
               <p>WASHINGTON, District Of Columbia</p>
             </router-link>
           </div>
-          <div class="joblist py-3">
+          <div class="py-3 joblist">
             <router-link to="/job">
               <p>Stationary Ground Maintenance Technician, LGA</p>
               <p>NEW YORK, New York</p>
