@@ -182,6 +182,20 @@ export default {
     this.passengerData = this.ticketData.passengerData;
     this.seatNumbers = this.ticketData.seatNumbers;
   },
+  methods: {
+    editBooking(passengerIndex) {
+      localStorage.setItem(
+        "editPassengerData",
+        JSON.stringify({
+          editPassengerData: {
+            passengerData: this.passengerData[passengerIndex],
+            passengerIndex: passengerIndex
+          },
+        })
+      );
+      this.$router.push("/editbooking");
+    },
+  },
 };
 </script>
 
