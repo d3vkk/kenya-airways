@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
 
@@ -71,6 +73,7 @@ export default {
         "ticketData",
         JSON.stringify({ ticketData: ticketData })
       );
+      Swal.fire("Done!", "Booking Created!", "success");
       this.$router.push("/admin");
     },
   },
