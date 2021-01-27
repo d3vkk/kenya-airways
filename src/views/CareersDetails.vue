@@ -1,14 +1,17 @@
 <template>
   <div>
-    <div class="container">
-      <div class="card col-md-8 card1">
-        <h2>Pacific Coordination Center Senior Manager</h2>
+    <NavBar />
+    <div class="px-3 py-6">
+      <h1>Pacific Coordination Center Senior Manager</h1>
+      <div class="py-3">
         <p>Job Type: Full Time</p>
         <p>Qualification: BA/BSc/HND</p>
         <p>Experience: 5 years</p>
         <p>Location: Nairobi</p>
         <p>Job Field: Aviation / Airline</p>
-        <h4>Job Purpose Statement</h4>
+      </div>
+      <div class="py-3">
+        <h2>Job Purpose Statement</h2>
         <p>
           Responsible for overall Cargo, Mail and courier security to implement,
           enforce and coordinate security systems and procedures for Kenya
@@ -19,7 +22,9 @@
           requirements on cargo security and IATA International Aviation
           Regulations on cargo security.
         </p>
-        <h4>Key duties and responsibilities</h4>
+      </div>
+      <div class="py-3">
+        <h2>Key duties and responsibilities</h2>
         <ul>
           <li>
             Ensure compliance with regulatory standards – IATA Cargo Standards,
@@ -64,7 +69,9 @@
             Kenya Airways’ security.
           </li>
         </ul>
-        <h4>Qualifications</h4>
+      </div>
+      <div class="py-3">
+        <h2>Qualifications</h2>
         <ul>
           <li>University degree or relevant professional qualification</li>
           <li>
@@ -82,7 +89,9 @@
           <li>Knowledge of Criminal Procedure, Penal Code and Evidence Act.</li>
           <li>Security certification form a recognized institution</li>
         </ul>
-
+      </div>
+      <div class="py-3">
+        <h2>Desired Behavioral competencies</h2>
         <ul>
           <li>Excellent leadership skillsExcellent leadership skills</li>
           <li>Excellent interpersonal and communication skills</li>
@@ -92,6 +101,8 @@
           <li>Humility</li>
           <li>Coaching & mentoring others</li>
         </ul>
+      </div>
+      <div class="py-3">
         <h2>Method of Application</h2>
         <p>
           Interested and qualified? Go to Kenya Airways on
@@ -99,19 +110,28 @@
         </p>
       </div>
     </div>
+    <FooterSection />
   </div>
 </template>
 
 <script>
-import "../../public/vendor/bootstrap.min.css";
-export default {};
+import "../../public/vendor/tailwind.min.css";
+import NavBar from "../layouts/NavBar";
+import FooterSection from "../layouts/FooterSection";
+export default {
+  components: {
+    NavBar,
+    FooterSection,
+  },
+};
 </script>
 
 <style scoped>
-.card1 {
-  margin: 0 auto;
-  float: none;
-  margin-bottom: 10px;
-  border: none;
+h1 {
+  font-size: 2.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+  color: #e91d24;
 }
 </style>
