@@ -478,6 +478,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/bootstrap.min.css";
 import NavBar from "../layouts/NavBar";
 import StepSection from "../layouts/StepSection";
@@ -504,6 +506,7 @@ export default {
   },
   methods: {
     selectFlight() {
+      Swal.fire("Step 1 of 4 Completed!", "Flight Chosen", "success");
       this.$router.push("/selectseats");
     },
   },
