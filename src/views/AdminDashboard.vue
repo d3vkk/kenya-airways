@@ -59,7 +59,10 @@
       </header>
       <div class="flex flex-col mt-6 mt-8">
         <div class="py-2 my-2 overflow-x-auto sm:mx-6 sm:px-6 lg:mx-1 lg:px-1">
-          <div class="flex flex-row items-end justify-end">
+          <div class="flex flex-row justify-between items-end">
+            <div class="my-2">
+              <b>Ticket Number:</b> #{{ ticketData.ticketId }}
+            </div>
             <router-link
               class="px-3 py-1 my-3 ml-3 font-medium tracking-wide text-white bg-black rounded-md hover:bg-red-800"
               to="/createbooking"
