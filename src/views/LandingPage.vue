@@ -85,6 +85,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
 import FooterSection from "../layouts/FooterSection";
@@ -104,6 +106,27 @@ export default {
   },
   methods: {
     searchFlight() {
+      let timerInterval;
+      Swal.fire({
+        title: "Searching flights...",
+        timer: 1000,
+        timerProgressBar: false,
+        didOpen: () => {
+          Swal.showLoading();
+          timerInterval = setInterval(() => {
+            const content = Swal.getContent();
+            if (content) {
+              const b = content.querySelector("b");
+              if (b) {
+                b.textContent = Swal.getTimerLeft();
+              }
+            }
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then(() => {});
       this.$router.push("/selectflight");
     },
   },
