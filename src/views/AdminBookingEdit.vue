@@ -38,7 +38,7 @@ export default {
   },
   mounted() {
     const editPassengerDataStored = JSON.parse(
-      localStorage.getItem("editPassengerData")
+      localStorage.getItem("adminEditPassengerData")
     );
     if (editPassengerDataStored != null) {
       this.editPassengerData = editPassengerDataStored.editPassengerData;

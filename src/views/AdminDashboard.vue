@@ -216,14 +216,14 @@ export default {
   methods: {
     editBooking() {
       localStorage.setItem(
-        "editPassengerData",
+        "adminEditPassengerData",
         JSON.stringify({
           editPassengerData: {
             seatNumbers: this.seatNumbers,
           },
         })
       );
-      this.$router.push("/editbooking");
+      this.$router.push("/admineditbooking");
     },
     deleteBooking(passengerIndex) {
       this.passengerData.splice(passengerIndex, 1);
