@@ -6,7 +6,7 @@
         <div class="header-content">
           <div class="text-white">
             <h2 style="font-size: 2.5rem">Explore a world of opportunities</h2>
-            <p>
+            <p class="px-10">
               The KQ Group offers a wide range of careers, whether you’re
               looking to join our pilots, engineering or cabin crew and air
               services teams. Browse our current vacancies and find out what
