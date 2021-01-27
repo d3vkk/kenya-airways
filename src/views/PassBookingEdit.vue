@@ -1,5 +1,5 @@
 <template>
- <div>
+  <div>
     <NavBar />
     <div class="container max-w-xs p-8">
       <div class="pl-2 text-2xl">Edit Booking</div>
@@ -54,7 +54,8 @@
           <router-link class="p-2" to="/dashboard">Cancel</router-link>
         </div>
       </form>
- </div>
+    </div>
+  </div>
 </template>
 
 <script>
