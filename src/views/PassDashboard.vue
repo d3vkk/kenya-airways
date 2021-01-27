@@ -123,6 +123,7 @@
 
 <script>
 import "../../public/vendor/tailwind.min.css";
+import { jsPDF } from "jspdf";
 
 export default {
   name: "pass-dashboard",
@@ -194,6 +195,21 @@ export default {
         })
       );
       this.$router.push("/editbooking");
+    },
+    printBooking(passengerIndex) {
+      const printPassenger = this.passengerData[passengerIndex];
+      const timeNow = new Date();
+      const printText = `
+        Kenya Airways - The Pride Of Africa
+        Time: ${timeNow}
+        Name: ${printPassenger.name}
+        Seat Count: ${this.seatNumbers.length}
+        Seat Numbers: ${this.seatNumbers.join(", ")}
+      `;
+
+      const pdf = new jsPDF();
+      pdf.text(printText, 10, 10);
+      pdf.save(`${printPassenger.name},${timeNow}.pdf`);
     },
   },
 };
