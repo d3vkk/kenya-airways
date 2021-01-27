@@ -184,6 +184,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/tailwind.min.css";
 import { jsPDF } from "jspdf";
 
@@ -258,22 +260,35 @@ export default {
       this.$router.push("/admineditbooking");
     },
     deleteBooking(passengerIndex) {
-      this.passengerData.splice(passengerIndex, 1);
-      localStorage.setItem(
-        "passengerData",
-        JSON.stringify({
-          ticketData: {
-            tripId: this.ticketData.tripId,
-            ticketId: this.ticketData.ticketId,
-            seatNumbers: this.ticketData.seatNumbers,
-            infants: this.ticketData.infants,
-            petCount: this.ticketData.petCount,
-            price: this.ticketData.price,
-            passengerData: this.passengerData,
-            paymentData: this.ticketData.paymentData,
-          },
-        })
-      );
+      Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#E91D24",
+        confirmButtonText: "Yes, delete it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          this.passengerData.splice(passengerIndex, 1);
+          localStorage.setItem(
+            "passengerData",
+            JSON.stringify({
+              ticketData: {
+                tripId: this.ticketData.tripId,
+                ticketId: this.ticketData.ticketId,
+                seatNumbers: this.ticketData.seatNumbers,
+                infants: this.ticketData.infants,
+                petCount: this.ticketData.petCount,
+                price: this.ticketData.price,
+                passengerData: this.passengerData,
+                paymentData: this.ticketData.paymentData,
+              },
+            })
+          );
+          Swal.fire("Deleted!", "The record has been deleted.", "success");
+        }
+      });
     },
     printBooking(passengerIndex) {
       const printPassenger = this.passengerData[passengerIndex];
