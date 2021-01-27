@@ -88,8 +88,10 @@
                     class="px-6 py-4 whitespace-no-wrap border-b border-gray-200"
                   >
                     <span
+                      v-for="(seatNumber, seatNumbersIndex) in seatNumbers"
+                      :key="seatNumbersIndex"
                       class="inline-flex px-2 text-xs font-semibold leading-5 text-green-800 bg-green-100 rounded-full"
-                      >{{ passenger.seatNumber }}</span
+                      >{{ seatNumber }}</span
                     >
                   </td>
                   <td
@@ -126,33 +128,59 @@ export default {
   name: "pass-dashboard",
   data() {
     return {
+      ticketData: null,
       passengerData: {},
+      seatNumbers: null,
     };
   },
   mounted() {
-    this.passengerData = [
-      {
-        name: "Felicitas Otolo",
-        dob: "1/11/1990",
-        phoneNumber: "0756785234",
-        email: "felicitas@gmail.com",
-        seatNumber: "34A",
-      },
-      {
-        name: "Gilbert Jirongo",
-        dob: "4/2/1994",
-        phoneNumber: "0766735464",
-        email: "gilbert@gmail.com",
-        seatNumber: "36A",
-      },
-      {
-        name: "Martin Kiplimo",
-        dob: "7/8/1974",
-        phoneNumber: "0766869004",
-        email: "martin@hotmail.com",
-        seatNumber: "38A",
-      },
-    ];
+    var ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+    if (ticketDataStored == null) {
+      localStorage.setItem(
+        "ticketData",
+        JSON.stringify({
+          ticketData: {
+            tripId: "21A",
+            ticketId: "DSFDFA78",
+            seatNumbers: ["34A", "33A", "35A"],
+            infants: false,
+            petCount: 2,
+            price: 23000,
+            passengerData: [
+              {
+                name: "Felicitas Otolo",
+                dob: "1/11/1990",
+                phoneNumber: "0756785234",
+                email: "felicitas@gmail.com",
+              },
+              {
+                name: "Gilbert Jirongo",
+                dob: "4/2/1994",
+                phoneNumber: "0766735464",
+                email: "gilbert@gmail.com",
+              },
+              {
+                name: "Martin Kiplimo",
+                dob: "7/8/1974",
+                phoneNumber: "0766869004",
+                email: "martin@hotmail.com",
+              },
+            ],
+            paymentData: {
+              debitOrCredit: true,
+              cardNumber: "4241313221",
+              name: "Adaer",
+              date: "21/3/2012",
+              cvc: "3243",
+            },
+          },
+        })
+      );
+      ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+    }
+    this.ticketData = ticketDataStored.ticketData;
+    this.passengerData = this.ticketData.passengerData;
+    this.seatNumbers = this.ticketData.seatNumbers;
   },
 };
 </script>
