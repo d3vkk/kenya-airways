@@ -109,6 +109,14 @@
           <a href="kenyaairways.taleo.net">kenyaairways.taleo.net</a> to apply
         </p>
       </div>
+      <div class="py-3">
+        <button
+          class="p-2 text-sm font-medium tracking-wide text-white bg-green-700 rounded-md hover:bg-black"
+          @click="printJob()"
+        >
+          Print
+        </button>
+      </div>
     </div>
     <FooterSection />
   </div>
@@ -118,10 +126,121 @@
 import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
 import FooterSection from "../layouts/FooterSection";
+import { jsPDF } from "jspdf";
+
 export default {
   components: {
     NavBar,
     FooterSection,
+  },
+  methods: {
+    printJob() {
+      const timeNow = new Date();
+      const printText = `
+      Pacific Coordination Center Senior Manager
+
+      Job Type: Full Time
+      Qualification: BA/BSc/HND
+      Experience: 5 years
+      Location: Nairobi
+      Job Field: Aviation / Airline
+
+
+      Job Purpose Statement
+
+      Responsible for overall Cargo, Mail and courier security to implement,
+      enforce and coordinate security systems and procedures for Kenya
+      Airways terminals, freighters, cargo, mail and courier shipments
+      network wide, in order to meet objectives of Kenya Airways and the
+      requirements of KCAA as per NCASP minimum requirements, European Union
+      requirements on RA3/ACC3, TSA Model security program regulatory
+      requirements on cargo security and IATA International Aviation
+      Regulations on cargo security.
+
+
+
+      Key duties and responsibilities
+
+      Develop and ensure implementation of procedures for effective
+      screening and secure storage of cargo, courier and mail during
+      handling. Manage cargo, Courier and Mail screening and address all
+      X-RAY maintenance.
+
+
+      Develop and ensure implementation of processes and procedures to
+      address cargo terminal and airside security.
+
+
+      Ensure full implementation of cargo security SLAs by cargo handlers
+      and Cargo Customer Airlines.
+
+
+      Continuously assess risks and threats of cargo security operations
+      and implement mitigating action network wide.
+
+
+      Coordinate gathering of intelligence on acts of unlawful
+      interference against cargo operations and analyze, collect data and
+      initiate counter measures.
+
+      Revamp Quality control activities at cargo operations.
+
+      Prepare, monitor and control the Cargo security budget to ensure
+      effective cost control.
+
+
+      Ensure effective management of Cargo operations Security staff HR
+      issues to drive high performance.
+
+
+      Ensure that the company meets its contract obligation with regards
+      to Cargo customer airlines being provided with security services by
+      Kenya Airways’ security.
+
+
+
+
+      Qualifications
+
+      University degree or relevant professional qualification
+
+      At least five years’ experience in security management in a
+      reputable organization.
+
+
+      Advanced university degree in a relevant discipline will be added
+      advantage Additional certification on ware housing operations will
+      be added advantage
+
+      Excellent communication and interpersonal skills
+      Organizational, planning and analytical skills.
+      IT proficiency
+      Knowledge of Criminal Procedure, Penal Code and Evidence Act.
+      Security certification form a recognized institution
+
+
+
+      Desired Behavioral competencies
+
+      Excellent leadership skillsExcellent leadership skills
+      Excellent interpersonal and communication skills
+      Industry and market knowledge
+      High integrity
+      Team player
+      Humility
+      Coaching & mentoring others
+
+
+
+      Method of Application
+
+      Interested and qualified? Go to Kenya Airways on
+      kenyaairways.taleo.netto apply
+      `;
+      const pdf = new jsPDF();
+      pdf.text(printText, 10, 10);
+      pdf.save(`Job,${timeNow}.pdf`);
+    },
   },
 };
 </script>
