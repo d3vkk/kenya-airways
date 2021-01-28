@@ -10,7 +10,7 @@
       />
     </router-link>
     <div class="flex flex-row items-center justify-between">
-      <a class="mr-3" href="tel:0789889456">About us</a>
+      <a class="mr-3" href="tel:0789889456">Call us</a>
       <a href="mailto:hi@kq.com">Email us</a>
     </div>
   </div>
