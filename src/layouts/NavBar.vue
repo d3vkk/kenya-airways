@@ -10,8 +10,8 @@
       />
     </router-link>
     <div class="flex flex-row items-center justify-between">
-      <div class="mr-3">About us</div>
-      <div>Contact us</div>
+      <a class="mr-3" href="tel:0789889456">About us</a>
+      <a href="mailto:hi@kq.com">Email us</a>
     </div>
   </div>
 </template>
@@ -23,4 +23,7 @@ export default {};
 </script>
 
 <style scoped>
+a {
+  color: black;
+}
 </style>
