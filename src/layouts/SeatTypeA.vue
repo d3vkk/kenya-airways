@@ -1,5 +1,9 @@
 <template>
-  <div class="seat-type-a p-1 mr-1">
+  <div
+    class="p-1 mr-1 seat-type-a"
+    @click="chosenSeat()"
+    :class="{ isChosen: isChosen }"
+  >
     <img
       src="../../public/img/seat-gray.png"
       alt=""
@@ -11,11 +15,30 @@
 <script>
 import "../../public/vendor/tailwind.min.css";
 
-export default {};
+export default {
+  data() {
+    return {
+      isChosen: false,
+    };
+  },
+  methods: {
+    chosenSeat() {
+      if (this.isChosen) {
+        this.isChosen = false;
+      } else {
+        this.isChosen = true;
+      }
+    },
+  },
+};
 </script>
 
 <style scoped>
 .seat-type-a:hover {
+  background-color: #e91d24;
+}
+
+.isChosen {
   background-color: #e91d24;
 }
 </style>
