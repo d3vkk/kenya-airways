@@ -122,12 +122,11 @@ export default {
   methods: {
     debitOrCredit(debitOrCredit) {
       this.debitOrCreditChosen = debitOrCredit;
-      console.log(
-        "debitOrCredit -> this.debitOrCreditChosen",
-        this.debitOrCreditChosen
-      );
     },
     payWithVisa() {
+      const ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+      const ticketData =
+        ticketDataStored == null ? [] : ticketDataStored.ticketData;
       this.paymentData = {
         debitOrCredit: this.debitOrCreditChosen,
         cardNumber: this.cardNumber,
@@ -135,7 +134,12 @@ export default {
         date: this.dateInput,
         cvc: this.cvc,
       };
-      console.log("payWithVisa -> this.paymentData", this.paymentData);
+      ticketData.paymentData = this.paymentData;
+      localStorage.setItem(
+        "ticketData",
+        JSON.stringify({ ticketData: ticketData })
+      );
+      this.$router.push("/");
     },
   },
 };
