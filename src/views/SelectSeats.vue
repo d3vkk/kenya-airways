@@ -135,6 +135,15 @@ export default {
   },
   methods: {
     selectSeats() {
+      const ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+      var ticketData =
+        ticketDataStored == null ? [] : ticketDataStored.ticketData;
+      const seatNumbers = ["34A", "33A", "35A"];
+      ticketData.seatNumbers = seatNumbers;
+      localStorage.setItem(
+        "ticketData",
+        JSON.stringify({ ticketData: ticketData })
+      );
       Swal.fire("Step 2 of 4 Completed!", "Seat Chosen", "success");
       this.$router.push("/details");
     },
