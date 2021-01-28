@@ -10,35 +10,37 @@
           </div>
           <form class="mx-3">
             <div class="form-group w-100">
-              <label for="inputName">Name</label>
+              <label>Name</label>
               <input type="text" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputEmail4">Email</label>
+              <label>Email</label>
               <input type="email" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputPhone">Phone Number</label>
+              <label>Phone Number</label>
               <input type="text" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputID">ID/Passport No.</label>
+              <label>ID/Passport No.</label>
               <input type="text" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputID">Date Of Birth</label>
+              <label>Date Of Birth</label>
               <input type="date" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputCity">City</label>
+              <label>City</label>
               <input type="text" class="form-control" required />
             </div>
             <div class="form-group w-100">
-              <label for="inputState">Country</label>
+              <label>Country</label>
               <input type="text" class="form-control" id="inputState" />
             </div>
             <div class="mb-3">
-              <button type="button" class="mr-3 btn btn-dark">Next Passenger</button>
+              <button type="button" class="mr-3 btn btn-dark">
+                Next Passenger
+              </button>
               <button type="button" class="btn btn-success">Done</button>
             </div>
           </form>
@@ -46,7 +48,7 @@
           <form action="" class="mx-3">
             <div class="mb-3">
               <div>Number of Bags between 23 & 35kgs</div>
-              <div for="inputbaggage" style="color: grey">2,500 per bag</div>
+              <div style="color: grey">2,500 per bag</div>
               <input
                 type="number"
                 class="form-control w-100"
@@ -55,7 +57,7 @@
             </div>
             <div class="mb-3">
               <div>Number of Pets:</div>
-              <div for="inputbaggage" style="color: grey">1000 per pet</div>
+              <div style="color: grey">1000 per pet</div>
               <input type="number" class="form-control w-100" id="inputPet" />
             </div>
             <div class="mb-3">
