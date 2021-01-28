@@ -4,7 +4,7 @@
     <div class="container" style="font-family: 'Lato', sans-serif">
       <StepSection :stepInfo="stepInfo" />
       <div class="mb-3 ml-4 mr-0 card-deck col">
-        <div class="card card1">
+        <div class="card card1" @click="selectFlight()">
           <div
             class="card-header"
             style="border-radius: 15px 15px 0 0; height: 3.5rem"
@@ -96,7 +96,7 @@
         </div>
       </div>
       <div class="mb-3 ml-4 mr-0 card-deck col">
-        <div class="card card1">
+        <div class="card card1" @click="selectFlight()">
           <div
             class="card-header"
             style="border-radius: 15px 15px 0 0; height: 3.5rem"
@@ -188,7 +188,7 @@
         </div>
       </div>
       <div class="mb-3 ml-4 mr-0 card-deck col">
-        <div class="card card1">
+        <div class="card card1" @click="selectFlight()">
           <div
             class="card-header"
             style="border-radius: 15px 15px 0 0; height: 3.5rem"
@@ -280,7 +280,7 @@
         </div>
       </div>
       <div class="mb-3 ml-4 mr-0 card-deck col">
-        <div class="card card1">
+        <div class="card card1" @click="selectFlight()">
           <div
             class="card-header"
             style="border-radius: 15px 15px 0 0; height: 3.5rem"
@@ -372,7 +372,7 @@
         </div>
       </div>
       <div class="mb-3 ml-4 mr-0 card-deck col">
-        <div class="card card1">
+        <div class="card card1" @click="selectFlight()">
           <div
             class="card-header"
             style="border-radius: 15px 15px 0 0; height: 3.5rem"
