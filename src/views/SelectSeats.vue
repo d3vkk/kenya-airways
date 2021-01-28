@@ -90,6 +90,14 @@
             <SeatTypeB />
           </div>
         </div>
+        <div class="py-3 text-center">
+          <button
+            class="p-2 text-sm font-medium tracking-wide text-white bg-green-700 rounded-md"
+            @click="selectSeats()"
+          >
+            Select Seats
+          </button>
+        </div>
       </div>
     </div>
     <FooterSection />
@@ -97,6 +105,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import NavBar from "../layouts/NavBar";
 import StepSection from "../layouts/StepSection";
 import SeatTypeA from "../layouts/SeatTypeA";
@@ -122,6 +132,12 @@ export default {
       stepTitle: this.stepTitle,
       stepNumber: this.stepNumber,
     };
+  },
+  methods: {
+    selectSeats() {
+      Swal.fire("Step 2 of 4 Completed!", "Seat Chosen", "success");
+      this.$router.push("/details");
+    },
   },
 };
 </script>
