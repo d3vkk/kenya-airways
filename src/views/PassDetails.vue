@@ -7,12 +7,6 @@
         <div class="card card1 col-sm-8">
           <div class="mt-4">
             <h3 style="float: left">Passenger One</h3>
-            <div
-              class="text-white card col-sm-3"
-              style="float: right; background-color: #e91d24; height: 30px"
-            >
-              <p class="mx-auto card-text">Ksh 70,000</p>
-            </div>
           </div>
           <form class="mx-3">
             <label>Name</label>
