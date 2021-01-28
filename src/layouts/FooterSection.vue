@@ -19,7 +19,7 @@
       <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
         <div class="pb-1 footer-title">About&nbsp;Us</div>
         <div class="pb-1">
-          <router-link to="/privacy-policy">Privacy&nbsp;Policy</router-link>
+          <router-link to="/privacypolicy">Privacy&nbsp;Policy</router-link>
         </div>
         <div class="pb-1"><a href="tel:0711188890">Call&nbsp;Us</a></div>
         <div class="pb-1">
