@@ -106,6 +106,19 @@ export default {
   },
   methods: {
     searchFlight() {
+      const ticketDataStored = JSON.parse(localStorage.getItem("ticketData"));
+      var ticketData =
+        ticketDataStored == null ? [] : ticketDataStored.ticketData;
+      ticketData = {
+        tripId: "21A",
+        ticketId: "DSFDFA78",
+        infants: this.infants,
+        price: 23000,
+      };
+      localStorage.setItem(
+        "ticketData",
+        JSON.stringify({ ticketData: ticketData })
+      );
       let timerInterval;
       Swal.fire({
         title: "Searching flights...",
