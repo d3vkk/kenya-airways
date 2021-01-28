@@ -105,6 +105,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/bootstrap.min.css";
 import NavBar from "../layouts/NavBar";
 import StepSectionWhite from "../layouts/StepSectionWhite";
@@ -153,6 +155,27 @@ export default {
         email: this.email,
       };
       this.clearForm();
+      let timerInterval;
+      Swal.fire({
+        title: "Saving Passenger...",
+        timer: 1000,
+        timerProgressBar: false,
+        didOpen: () => {
+          Swal.showLoading();
+          timerInterval = setInterval(() => {
+            const content = Swal.getContent();
+            if (content) {
+              const b = content.querySelector("b");
+              if (b) {
+                b.textContent = Swal.getTimerLeft();
+              }
+            }
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then(() => {});
       this.passengerNumber++;
     },
     clearForm() {
@@ -170,6 +193,28 @@ export default {
         "ticketData",
         JSON.stringify({ ticketData: this.ticketData })
       );
+      this.clearForm();
+      let timerInterval;
+      Swal.fire({
+        title: "All Passengers Saved!",
+        timer: 1000,
+        timerProgressBar: false,
+        didOpen: () => {
+          Swal.showLoading();
+          timerInterval = setInterval(() => {
+            const content = Swal.getContent();
+            if (content) {
+              const b = content.querySelector("b");
+              if (b) {
+                b.textContent = Swal.getTimerLeft();
+              }
+            }
+          }, 100);
+        },
+        willClose: () => {
+          clearInterval(timerInterval);
+        },
+      }).then(() => {});
     },
     doneWithBaggageAndPets() {
       this.ticketData.petCount = this.pets;
@@ -177,6 +222,8 @@ export default {
         "ticketData",
         JSON.stringify({ ticketData: this.ticketData })
       );
+      Swal.fire("Done!", "Passenger Details Entered!", "success");
+      this.$router.push("/pay");
     },
   },
 };
