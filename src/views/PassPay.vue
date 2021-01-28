@@ -142,7 +142,7 @@ export default {
         JSON.stringify({ ticketData: ticketData })
       );
       Swal.fire("Done!", "Flight Paid For!", "success");
-      this.$router.push("/");
+      this.$router.push("/dashboard");
     },
   },
 };
