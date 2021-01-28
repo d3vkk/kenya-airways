@@ -37,6 +37,10 @@
               <label for="inputState">Country</label>
               <input type="text" class="form-control" id="inputState" />
             </div>
+            <div class="mb-3">
+              <button type="button" class="mr-3 btn btn-dark">Next Passenger</button>
+              <button type="button" class="btn btn-success">Done</button>
+            </div>
           </form>
           <h2 class="mt-4 mb-3">Baggage and Pets</h2>
           <form action="" class="mx-3">
