@@ -88,6 +88,8 @@
 </template>
 
 <script>
+import Swal from "sweetalert2/dist/sweetalert2.min.js";
+import "sweetalert2/dist/sweetalert2.min.css";
 import "../../public/vendor/tailwind.min.css";
 import NavBar from "../layouts/NavBar";
 import StepSectionWhite from "../layouts/StepSectionWhite";
@@ -139,6 +141,7 @@ export default {
         "ticketData",
         JSON.stringify({ ticketData: ticketData })
       );
+      Swal.fire("Done!", "Flight Paid For!", "success");
       this.$router.push("/");
     },
   },
