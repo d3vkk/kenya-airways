@@ -4,13 +4,7 @@
 
 Kenya Airways Website showcasing Human Computer Interaction Principles
 
-Built with:
-Vue.js
-Tailwind CSS (17 Components)
-Bootstrap (2 Components)
-ES6+ Javascript
-CSS
-HTML
+Built with: Vue.js, Tailwind CSS (17 Components), Bootstrap (2 Components), ES6+ Javascript, CSS, HTML
 
 Fork or clone this repo
 ```
