@@ -46,21 +46,21 @@
           <div class="flex flex-row">
             <div class="w-1/3 p-2 mt-4 mb-4">
               <span class="mr-2">Adults</span>
-              <button class="px-2 mr-2 font-bold text-white bg-black rounded">
+              <button type="button" class="px-2 mr-2 font-bold text-white bg-black rounded">
                 -
               </button>
               <span ref="adultsCount">1</span>
-              <button class="px-2 ml-2 font-bold text-white bg-black rounded">
+              <button type="button" class="px-2 ml-2 font-bold text-white bg-black rounded">
                 +
               </button>
             </div>
             <div class="w-1/3 p-2 mt-4 mb-4">
               <span class="mr-2">Children</span>
-              <button class="px-2 mr-2 font-bold text-white bg-black rounded">
+              <button type="button" class="px-2 mr-2 font-bold text-white bg-black rounded">
                 -
               </button>
               <span ref="childrenCount">1</span>
-              <button class="px-2 ml-2 font-bold text-white bg-black rounded">
+              <button type="button" class="px-2 ml-2 font-bold text-white bg-black rounded">
                 +
               </button>
             </div>
