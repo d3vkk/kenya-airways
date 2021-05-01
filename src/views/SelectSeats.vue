@@ -92,7 +92,7 @@
         </div>
         <div class="py-3 text-center">
           <button
-            class="p-2 text-sm font-medium tracking-wide text-white bg-green-700 rounded-md"
+            class="p-2 text-sm font-medium tracking-wide text-white bg-black rounded-md"
             @click="selectSeats()"
           >
             Select Seats

@@ -63,12 +63,12 @@
               />
             </div>
             <div class="mb-3">
-              <button type="submit" class="mr-3 btn btn-dark">
+              <button type="submit" class="mr-3 btn btn-light">
                 Next Passenger
               </button>
               <button
                 type="button"
-                class="btn btn-success"
+                class="btn btn-dark"
                 @click="doneWithPassengers()"
               >
                 Done
@@ -90,7 +90,7 @@
             <div class="mb-3">
               <button
                 type="button"
-                class="btn btn-success"
+                class="btn btn-dark"
                 @click="doneWithBaggageAndPets()"
               >
                 Done

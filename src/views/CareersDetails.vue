@@ -111,7 +111,7 @@
       </div>
       <div class="py-3">
         <button
-          class="p-2 text-sm font-medium tracking-wide text-white bg-green-700 rounded-md hover:bg-black"
+          class="p-2 text-sm font-medium tracking-wide text-white bg-black rounded-md hover:bg-black"
           @click="printJob()"
         >
           Print
