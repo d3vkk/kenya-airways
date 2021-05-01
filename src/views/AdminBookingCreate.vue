@@ -16,6 +16,37 @@
           />
         </div>
         <div class="p-2 mt-4 mb-4">
+          <div class="mb-2">Passenger Email</div>
+          <input
+            class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+            type="email"
+            autocomplete
+            required
+            v-model="email"
+          />
+        </div>
+        <div class="p-2 mt-4 mb-4">
+          <div class="mb-2">Passenger Phone Number</div>
+          <input
+            class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+            type="text"
+            maxlength="50"
+            autocomplete
+            required
+            v-model="phoneNumber"
+          />
+        </div>
+        <div class="p-2 mt-4 mb-4">
+          <div class="mb-2">Passenger Date Of Birth</div>
+          <input
+            class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
+            type="date"
+            autocomplete
+            required
+            v-model="dob"
+          />
+        </div>
+        <div class="p-2 mt-4 mb-4">
           <div class="mb-2">Seat Numbers</div>
           <input
             class="w-full px-3 py-2 leading-tight text-gray-700 border rounded shadow appearance-none"
@@ -65,6 +96,9 @@ export default {
       const passengerData = ticketData.passengerData;
       passengerData[passengerData.length] = {
         name: this.passengerName,
+        dob: this.dob,
+        phoneNumber: this.phoneNumber,
+        email: this.email,
       };
 
       ticketData.seatNumbers.push(...this.seatNumbers.split(","));
