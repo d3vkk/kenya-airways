@@ -6,9 +6,13 @@
     >
       <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
         <div class="pb-1 footer-title">Useful&nbsp;Links</div>
-        <div class="pb-1"><router-link to="\careers">Career</router-link></div>
+        <div class="pb-1"><router-link to="\careers">Careers</router-link></div>
         <div class="pb-1"><a href="#book">Booking&nbsp;Inquiry</a></div>
-        <div class="pb-1"><a href="#search">View&nbsp;Ticket</a></div>
+        <div class="pb-1">
+          <router-link to="/dashboard">
+            View&nbsp;Ticket&nbsp;In&nbsp;Dashboard
+          </router-link>
+        </div>
       </div>
       <div class="w-full pb-6 md:w-1/4 lg:w-1/4">
         <div class="pb-1 footer-title">More&nbsp;Info</div>
