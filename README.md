@@ -1,6 +1,6 @@
 # Kenya Airways
 
-![Kenya Airways Screenshot](https://github.com/d3vkk//blob/master/screenshot.png)
+![Kenya Airways Screenshot](https://github.com/d3vkk/kenya-airways/blob/master/screenshot.png)
 
 Kenya Airways Website showcasing Human Computer Interaction Principles
 
