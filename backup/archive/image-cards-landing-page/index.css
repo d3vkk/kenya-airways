@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --red: #E91D24;
+    --gray-100: #dfcfcf;
+    --gray-200: #C5BEBE;
+    --bigger: 5rem;
+    --big: 2.5rem;
+    --normal: 1.25rem;
+    --base: 1rem;
+    --smaller: 0.625rem;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+#hero-image {
+    background: url('../../../public/img/hero.webp') center center no-repeat;
+    height: 500px;
+}
+
+#hero-title {
+    color: var(--red);
+    font-size: var(--big);
+    font-weight: bold;
+}
+
+#hero-slogan {
+    color: var(--black);
+    font-size: var(--normal);
+}
+
+#image-dubai {
+    /* background: url('../../../public/img/dubai.webp') center center no-repeat; */
+    background: url('../../../public/img/dubai.webp') top left no-repeat;
+
+}
+
+footer svg {
+    fill: var(--black);
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+
+#first-footer {
+    background-color: var(--gray-100);
+}
+
+.footer-title {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#privacy-policy h1 {
+    font-size: var(--big);
+}
+
+#privacy-policy .title {
+    font-size: var(--normal);
+    color: var(--red);
+}
+
+#privacy-policy p {
+    margin: 10px 0;
+}
+
+#privacy-policy ul {
+    list-style: disc;
+    margin: 1em;
+}
+
+#privacy-policy ul li {
+    margin: 5px 0;
+}

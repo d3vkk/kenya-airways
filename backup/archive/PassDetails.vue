@@ -1,0 +1,114 @@
+<template>
+  <div>
+    <NavBar />
+    <div id="passenger-details" class="my-1">
+      <StepSectionWhite :stepInfo="stepInfo" />
+      <div class="container py-5">
+        <div class="card card1 col-sm-8">
+          <div class="mt-4">
+            <h3 style="float: left">Passenger One</h3>
+          </div>
+          <form class="mx-3">
+            <label>Name</label>
+            <div class="mb-3 form-row">
+              <div class="col">
+                <input type="text" class="form-control" />
+              </div>
+            </div>
+            <div class="mb-3 form-row">
+              <div class="form-group w-100">
+                <label for="inputID">ID/Passport No.</label>
+                <input type="text" class="form-control" id="inputID" />
+              </div>
+              <div class="form-group w-100">
+                <label for="inputPhone">Phone Number</label>
+                <input type="text" class="form-control" id="inputPhone" />
+              </div>
+              <div class="form-group w-100">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" />
+              </div>
+            </div>
+
+            <div class="mb-3 form-row">
+              <div class="form-group w-100">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" />
+              </div>
+              <div class="form-group w-100">
+                <label for="inputState">Country</label>
+                <input type="text" class="form-control" id="inputState" />
+              </div>
+              <div class="form-group w-100">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" />
+              </div>
+            </div>
+          </form>
+          <h2 class="mt-4 mb-3">Baggage and Pets</h2>
+          <form action="" class="mx-3">
+            <div class="mb-3">
+              <div>Number of Bags between 23 & 35kgs</div>
+              <div for="inputbaggage" style="color: grey">2,500 per bag</div>
+              <input
+                type="number"
+                class="form-control w-100"
+                id="inputbaggage"
+              />
+            </div>
+            <div class="mb-3">
+              <div>Number of Pets:</div>
+              <div for="inputbaggage" style="color: grey">1000 per pet</div>
+              <input type="number" class="form-control w-100" id="inputPet" />
+            </div>
+            <div class="mb-3">
+              <button type="button" class="btn btn-success">Done</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <FooterSection />
+  </div>
+</template>
+
+<script>
+import "../../public/vendor/bootstrap.min.css";
+import NavBar from "../layouts/NavBar";
+import StepSectionWhite from "../layouts/StepSectionWhite";
+import FooterSection from "../layouts/FooterSection";
+
+export default {
+  components: {
+    NavBar,
+    StepSectionWhite,
+    FooterSection,
+  },
+  data() {
+    return {
+      stepTitle: "Passenger Details, Baggage and Pets",
+      stepNumber: 3,
+      stepInfo: null,
+    };
+  },
+  mounted() {
+    this.stepInfo = {
+      stepTitle: this.stepTitle,
+      stepNumber: this.stepNumber,
+    };
+  },
+};
+</script>
+
+<style scoped>
+.card1 {
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 10px;
+}
+#passenger-details {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url("../../public/img/hero.webp") center center no-repeat;
+  background-size: cover;
+}
+</style>
